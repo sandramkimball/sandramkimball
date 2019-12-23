@@ -63,24 +63,27 @@ const Projects = () => {
 export default Projects;
 
 const ProjectsContainer = styled.section`
-    width: 70vw;
+    width: 65vw;
+    height: 98vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    i{display: none}
-    p{ font-size: 3rem; cursor: pointer; color: red}
+    overflow: scroll;
+    ::-webkit-scrollbar{ width: 0}
     .projects-container{
+        margin: 100px 0;
         display: flex; 
         flex-direction: column;
         justify-content: center;
+        
 }`;
 
 const Project = styled.div`
     margin: 10px auto;
     background: #f7f1e4;
     width: 80%;
-    height: 125px;
+    height: 175px;
     display: flex;
     a{ 
         color: #fff;
@@ -89,15 +92,16 @@ const Project = styled.div`
         display: flex;
         align-items: center;
         img{
-            height: 125px;
+            height: 175px;
             width: 200px;
             object-fit: cover;
             object-position: top;
             filter: grayscale(100%);
+            margin-right: 10px;
         }
         h2{
             font-size: 1.25rem;
-            padding: 0 5px;
+            padding: 0;
             margin: 0;
             text-align: left;
             color: #000;
@@ -106,7 +110,7 @@ const Project = styled.div`
             font-size: 1rem;
             text-align: left
             color: #000;
-            padding: 0 5px;
+            padding: 0 5px 0 0;
             margin: 0;
         }
         :hover{

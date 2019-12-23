@@ -44,14 +44,14 @@ const Banner = styled.section`
             margin-top: -25px;
         }    
         h1{
-            font-size: 3rem;
+            font-size: 2.75rem;
             font-weight: 650;
             color: #060569;
             font-family: 'Raleway', sans-serif;
             margin: 0 auto;
         }
         h2{
-            font-size: 2rem;
+            font-size: 1.75rem;
             color: #060569;
             font-family: 'Raleway', sans-serif;
             margin: 0 auto;
