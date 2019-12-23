@@ -1,38 +1,54 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #e7d8b8;
+  width: 100%;
+  height: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.App .body{
+  margin-top: 65px;
+  display: flex;
+}
+
+.App .banner-wrapper{
+  height: 100vh;
+  width: 30vw;
+  background-color: #f7f1e4;
+  border: 3px solid green;
+}
+
+
+/* NAVIGATION */
+.navigation{
+  max-height: 5vh;
+  width: 100%;
+  background: #857c6a;
+  position: fixed;
+  top: 0;
+  font-family: 'Raleway';
+  z-index: 10;
+}
+#navbar{
+  font-size: 18px;
+  margin-right: 100px;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+#navbar ul{
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+}
+#navbar ul a:hover{
+  color: #d8d7d7;
+}
+#navbar ul a{
   color: white;
+  text-decoration: none;
+  list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
