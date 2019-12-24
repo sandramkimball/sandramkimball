@@ -77,7 +77,7 @@ button:hover{
 }
 
 /* Contact Popup */
-#mainpage .contact .display-none{
+#mainpage .display-none{
   display: none;
 
 }
@@ -85,6 +85,6 @@ button:hover{
   max-width: 50px;
 }
 
-#mainpage .contact .display-open{
+#mainpage .display-open{
   display: none;
 }

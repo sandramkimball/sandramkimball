@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Contact = (handleClose) => {
+const Contact = ({handleClose}) => {
 
     return (
         <Banner>
@@ -50,15 +50,9 @@ const Banner = styled.section`
         color: #fff;
         margin: 0;
         padding: 0;
-    }
-    h1{
-        margin-bottom: 2.5%;
-        font-size: 3rem;            
-        color: gray;
-        font-family: 'Raleway', sans-serif;
-    }
-    
+    }    
 }`
+
 const FormContainer = styled.div`
     width: 40vw;
     background: #857c6a;
@@ -66,7 +60,6 @@ const FormContainer = styled.div`
     flex-direction: column;
     position: fixed;
     left: 25%;
-    div{margin: 0 auto}
     form{
         margin: 0 auto;
         margin-top: -50px;
@@ -91,13 +84,6 @@ const FormContainer = styled.div`
             background-color: #f7f1e4;
             font-family: sans-serif;
         }
-        button{
-            padding: 10px
-            font-size: 1rem;
-            border: 1px solid #f7f1e4;
-            text-align: center;
-            margin: 10px auto;
-        }
-        
+        button{margin: 5px auto} 
     }
 `;

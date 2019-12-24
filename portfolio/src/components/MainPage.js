@@ -4,7 +4,7 @@ import Skills from './Skills';
 import Contact from './Contact';
 
 const MainPage =()=>{
-    const [showContact, setShowContact] = useState(true || false);
+    const [showContact, setShowContact] = useState(false || true);
     const showHideClassName = showContact ? "contact display-open" : "contact display-none";
 
     const handleClick = e => {
