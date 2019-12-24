@@ -23,37 +23,30 @@ export default LeftBar;
 const Banner = styled.section`
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
     width: 30vw;
-    overflow: no scroll;
+    background: url('https://images.unsplash.com/photo-1543751416-705d3e34d02a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80');
     div{
         height: 100%;
         width: 100%;
-        align-content: center;
-        align-items: center;
         margin: 0 auto;
         justify-content: center;
         display: flex;
         flex-direction: column;
+        text-align: left;
+        font-family: 'Raleway', sans-serif;
+        color: #fff;
         img{
-            width: 80%;
-            height: 75%;
+            width: 25vw;
+            height: 60vh;
             object-fit: cover;
             object-position: top;
             margin: 0 auto;
-            margin-top: -25px;
+            margin-top: -5vh;
         }    
-        h1{
-            font-size: 2.75rem;
-            font-weight: 650;
-            color: #060569;
-            font-family: 'Raleway', sans-serif;
-            margin: 0 auto;
-        }
-        h2{
+        h1, h2{
             font-size: 1.75rem;
-            color: #060569;
-            font-family: 'Raleway', sans-serif;
+            width: 25vw;
             margin: 0 auto;
         }
 }`

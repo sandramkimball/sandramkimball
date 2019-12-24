@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Contact = () => {
+const Contact = (handleClose) => {
+
     return (
         <Banner>
+            <button onClick={handleClose} className='close_button'>X</button> 
             <FormContainer>
                 <form id='contact-form' method='post' action='contact-form.php'>
                     <input 
