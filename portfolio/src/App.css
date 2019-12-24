@@ -77,26 +77,14 @@ button:hover{
 }
 
 /* Contact Popup */
-.contact .display-none{
-  position: fixed;
-  top: 0;  
-  left: 0;  
-  right: 0;  
-  bottom: 0;  
-  margin: auto;  
-  display: initial;
+#mainpage .contact .display-none{
+  display: none;
+
 }
 .close_button{
   max-width: 50px;
 }
 
-.contact .display-open{
-  position: fixed;
-  left: 25%;  
-  right: 25%;  
-  top: 25%;  
-  bottom: 25%; 
-  z-index: 20;
-  margin: auto;  
+#mainpage .contact .display-open{
   display: none;
 }

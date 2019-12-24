@@ -24,7 +24,10 @@ const MainPage =()=>{
                 <button onClick={handleClick}>Contact</button>
             </div>
             <Skills/>
-            <Contact className={showHideClassName} handleClose={handleClose}/>
+            <div className={showHideClassName} >
+                <Contact handleClose={handleClose}/>
+            </div>
+            
         </section>
     )
 }
