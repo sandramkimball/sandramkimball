@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
-import Skills from './Skills';
 import Contact from './Contact';
+import styled from 'styled-components';
 
 const MainPage =()=>{
     const [showContact, setShowContact] = useState(false || true);
@@ -17,23 +17,43 @@ const MainPage =()=>{
     };
 
     return (
-        <section id='mainpage'>
+        <AboutContainer id='mainpage'>
             <div>
                 <h2>About Me</h2>
                 <p>From preschool teaching to coding.</p>
-                <button onClick={handleClick}>Contact</button>
+                <button onClick={handleClick}>CONTACT</button>
             </div>
-            <Skills/>
             <div className={showHideClassName} >
-                <Contact handleClose={handleClose}/>
+                {/* <Contact handleClose={handleClose}/> */}
             </div>
             
-        </section>
+        </AboutContainer>
     )
 }
 
 export default MainPage;
 
-const container = document.createElement("div");
-document.body.appendChild(container);
-ReactDOM.render(<MainPage />, container)
+const AboutContainer = styled.section`
+    margin: auto;
+    background: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 60vh;
+    padding: 5px 0;    
+    overflow: hidden;
+    button{
+        background: none;
+        padding: 15px;
+        color: #eeeeef;
+        border: 1px solid #eeeef;
+        font-size: 1rem;
+    }
+    button:hover{
+        color: #fff;
+        cursor: pointer;;
+    }
+
+`;
+
+  

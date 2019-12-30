@@ -54,30 +54,26 @@ const Skills  = () => {
 export default Skills;
 
 const SkillList = styled.section`
-    margin: 0 auto;
-    padding: 20px 0;
-    width: 80%;
+    margin-top: 5px;
+    padding: 0;
+    width: 100%;
     display: flex;    
     flex-direction: column;
     justify-content: center;
-    background-color: #403226;
     ul{
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        font-size: 1.5rem
+        justify-content: flex-start;
         li{ 
-            width: 24%;
-            text-align: left;
-            margin: auto;
+            font-size: 1.125rem;
+            margin: 0 15px;
             list-style: none;
-            color: #f7f1e4;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            p{padding: 0; margin-top: 0}
+            p{padding: 0; margin: 0}
         }    
 }`

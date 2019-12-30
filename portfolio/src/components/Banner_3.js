@@ -11,6 +11,7 @@ const Projects = () => {
     return (
         <ProjectsContainer>
             <div class='projects-container'>
+            <h6>PROJECTS</h6>
                 <Project>
                     <a href='https://foodie-fun-app.netlify.com/?_ga=2.228749211.602302675.1567105491-253791327.1567105491' target="_blank">
                         <img src={homepage}/>
@@ -63,58 +64,62 @@ const Projects = () => {
 export default Projects;
 
 const ProjectsContainer = styled.section`
-    width: 65vw;
-    height: 98vh;
+    width: 100vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: scroll;
-    ::-webkit-scrollbar{ width: 0}
     .projects-container{
         margin: 100px 0;
         display: flex; 
         flex-direction: column;
-        justify-content: center;
-        
-}`;
+        justify-content: center;        
+    }
+`;
 
 const Project = styled.div`
-    margin: 10px auto;
-    background: #f7f1e4;
-    width: 80%;
+    margin: 0 auto;
     height: 175px;
+    width: 100%;
+    padding: 5px;
+    background: #f9f9fb;
+    border-top: 1px solid #eeeeef;
+    border-bottom: 1px solid #eeeeef;
     display: flex;
     a{ 
-        color: #fff;
+        font-family: 'Roboto', sans-serif;        
         transform: none;
         text-decoration: none;
         display: flex;
         align-items: center;
+        justify-content: center;
         img{
-            height: 175px;
-            width: 200px;
+            height: 100%;
+            width: 20%;
             object-fit: cover;
             object-position: top;
-            filter: grayscale(100%);
             margin-right: 10px;
         }
-        h2{
-            font-size: 1.25rem;
-            padding: 0;
-            margin: 0;
-            text-align: left;
-            color: #000;
+        div{
+            width: 40%;
+            color: gray;
+            h2{
+                font-size: 1.25rem;
+                padding: 0;
+                margin: 0;
+                text-align: left;
+            }
+            p{
+                font-size: 1rem;
+                text-align: left;
+                padding: 0 5px 0 0;
+                margin: 0;
+            }
         }
-        p{
-            font-size: 1rem;
-            text-align: left
-            color: #000;
-            padding: 0 5px 0 0;
-            margin: 0;
-        }
-        :hover{
-            img{filter: none;}
-        }
+    }
+    :hover{
+        h2, p{color: #000;}
+        box-shadow: 0px 0px 20px gray;
+        z-index: 5;
     }
 `;

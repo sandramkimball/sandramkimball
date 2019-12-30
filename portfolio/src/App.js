@@ -8,9 +8,9 @@ import {
 import './App.css';
 
 //components
-import Projects from './components/Projects';
-import LeftBar from './components/Left-Bar';
-import MainPage from './components/MainPage';
+import Banner_1 from './components/Banner_1';
+import Banner_2 from './components/Banner_2';
+import Banner_3 from './components/Banner_3';
 
 
 function App() {
@@ -18,7 +18,6 @@ function App() {
     <div className="App">
       <header className="App-header">
       <Router>
-        <div className='navigation'>
           <nav id="navbar">
             <ul>
                 <Link to='/mainpage'><a href="#mainpage" id='Hello'>Hello!</a></Link>
@@ -27,20 +26,12 @@ function App() {
                 <a href="https://github.com/sandramkimball?tab=repositories" target="_blank"><li>Github</li></a>
             </ul>
           </nav>
-        </div>
-        <div className = 'body'>
-          <LeftBar className='banner-wrapper'/>
-          <Switch> 
-            <Route path='/mainpage'>
-              <MainPage/>
-            </Route>
-            <Route path='/projects'>
-              <Projects/>
-            </Route>
-          </Switch>
-        </div>
-        </Router>          
-       
+          <div className = 'body'>
+            <Banner_1 className='banner-wrapper'/>
+            <Banner_2/>
+            <Banner_3/>
+          </div>
+      </Router>         
       </header>
     </div>
   );
