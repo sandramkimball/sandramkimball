@@ -11,7 +11,7 @@
     "routes": [
         { 
             "src": "/(.*)", 
-            "dest": "portfolio_react/$1" 
+            "dest": "portfolio/$1" 
         }
     ]
   }
