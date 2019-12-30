@@ -1,8 +1,17 @@
 {
     "version": 2,
     "name": "portfolio_react",
-    "builds": [{ "src": "portfolio_react/portfolio/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
+    "builds": [
+        { 
+            "src": "portfolio_react/portfolio/package.json", 
+            "use": "@now/static-build", 
+            "config": {"distDir": "build"} 
+        }
+    ],
     "routes": [
-        { "src": "/(.*)", "dest": "portfolio_react/$1" }
+        { 
+            "src": "/(.*)", 
+            "dest": "portfolio_react/$1" 
+        }
     ]
   }
