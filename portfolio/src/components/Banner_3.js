@@ -43,7 +43,7 @@ const Projects = () => {
                 </Project>
 
                 <Project>
-                    <a target="_blank">
+                    <a href='https://stylistfind.now.sh/' target="_blank">
                         <img src={stylist}/>
                         <div>
                             <h2>Coming Soon</h2>
