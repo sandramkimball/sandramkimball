@@ -46,7 +46,7 @@ const Projects = () => {
                     <a href='https://stylistfind.now.sh/' target="_blank">
                         <img src={stylist}/>
                         <div>
-                            <h2>Coming Soon</h2>
+                            <h2>Stylist Find</h2>
                             <p>Built a SQL database, populated it with dummy data, and used it in a front end application designed as a professional platform for hairstylists to self promote.</p>
                         </div>
                     </a>
