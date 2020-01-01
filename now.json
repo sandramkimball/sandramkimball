@@ -3,7 +3,7 @@
     "name": "portfolio_react",
     "builds": [
         { 
-            "src": "/portfolio_react/package.json", 
+            "src": "portfolio/package.json", 
             "use": "@now/static-build", 
             "config": {"distDir": "build"} 
         }
@@ -11,7 +11,7 @@
     "routes": [
         { 
             "src": "/(.*)", 
-            "dest": "portfolio_react/$1" 
+            "dest": "portfolio/$1" 
         }
     ]
   }
