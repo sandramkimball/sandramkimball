@@ -21,19 +21,19 @@ const Skills  = () => {
                 </li>
                 <li>
                     <FontAwesomeIcon icon={faJs} />
-                    <p>Javascript</p>
+                    <p>JAVASCRIPT</p>
                 </li>
                 <li>
                     <FontAwesomeIcon icon={faReact} />
-                    <p>ReactJS</p>
+                    <p>REACTJS</p>
                 </li>   
                 <li>
                     <FontAwesomeIcon icon={faNode} />
-                    <p>Node</p>
+                    <p>NODE</p>
                 </li>
                 <li>
                     <FontAwesomeIcon icon={faNode} />
-                    <p>Express</p>
+                    <p>EXPRESS</p>
                 </li>
                 <li>
                     <FontAwesomeIcon icon={faDatabase} />
@@ -41,7 +41,7 @@ const Skills  = () => {
                 </li>
                 <li>
                     <FontAwesomeIcon icon={faServer} />
-                    <p>GraphQL</p>
+                    <p>GRAPHQL</p>
                 </li>
             </ul>
             <script>
@@ -54,9 +54,9 @@ const Skills  = () => {
 export default Skills;
 
 const SkillList = styled.section`
-    margin-top: 5px;
-    padding: 0;
-    width: 100%;
+    margin: 5px auto;
+    padding: 0 0 11px 0;
+    width: 50%;
     display: flex;    
     flex-direction: column;
     justify-content: center;
@@ -66,14 +66,14 @@ const SkillList = styled.section`
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         li{ 
-            font-size: 1.125rem;
             margin: 0 15px;
             list-style: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-            p{padding: 0; margin: 0}
+            p{padding: 0; margin: 0; font-size: 1.125rem}
+            svg{font-size: 3rem; color: red}
         }    
 }`

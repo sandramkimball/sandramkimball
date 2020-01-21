@@ -4,14 +4,14 @@ import styled from 'styled-components';
 //images
 import homepage from '../images/tinyHomepage.png';
 import icnst from '../images/icnst.png';
-import reducer_todo from '../images/reducer-todo.png';
+import sautidb3 from '../images/sautidb3.png';
 import stylist from '../images/stylist-find.png';
 
 const Projects = () => {
     return (
-        <ProjectsContainer>
-            <div class='projects-container'>
+        <ProjectsContainer id='3'> 
             <h6>PROJECTS</h6>
+            <div class='projects-container'>
                 <Project>
                     <a href='https://foodie-fun-app.netlify.com/?_ga=2.228749211.602302675.1567105491-253791327.1567105491' target="_blank">
                         <img src={homepage}/>
@@ -33,11 +33,11 @@ const Projects = () => {
                 </Project>
 
                 <Project>
-                    <a href='https://reducer-todo.sandramkimball.now.sh' target="_blank">
-                        <img src={reducer_todo}/>
+                    <a href='https://sauti.now.sh/' target="_blank">
+                        <img src={sautidb3}/>
                         <div>
-                            <h2>Reducer Todo List</h2>
-                            <p>A pactice using reducers to set stat and actions.</p>
+                            <h2>Sauti Traders</h2>
+                            <p>Worked on a team of five with a non-profit organization to deliver a cross-filtration search platform for traders data collected by the organization.</p>
                         </div>
                     </a>
                 </Project>
@@ -67,59 +67,55 @@ const ProjectsContainer = styled.section`
     width: 100vw;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
+    background: #f7f7f7;  
     .projects-container{
         margin: 100px 0;
         display: flex; 
-        flex-direction: column;
-        justify-content: center;        
+        justify-content: center;  
+        width: 90%;   
     }
 `;
 
 const Project = styled.div`
-    margin: 0 auto;
-    height: 175px;
-    width: 100%;
-    padding: 5px;
-    background: #f9f9fb;
-    border-top: 1px solid #eeeeef;
-    border-bottom: 1px solid #eeeeef;
-    display: flex;
+    margin: 1.5rem;
+    height: 440px;
+    width: 380px;
+    border: 1px solid #eeeeef;
     a{ 
         font-family: 'Roboto', sans-serif;        
         transform: none;
         text-decoration: none;
-        display: flex;
         align-items: center;
         justify-content: center;
         img{
-            height: 100%;
-            width: 20%;
+            width: 100%;
+            height: 50%;
             object-fit: cover;
             object-position: top;
-            margin-right: 10px;
         }
         div{
-            width: 40%;
-            color: gray;
+            color: #000;
+            width: 90%;
+            margin: auto;
             h2{
                 font-size: 1.25rem;
                 padding: 0;
-                margin: 0;
+                margin-top: 1.5rem;
                 text-align: left;
             }
             p{
+                color: gray;
                 font-size: 1rem;
                 text-align: left;
-                padding: 0 5px 0 0;
+                padding: 0;
                 margin: 0;
             }
         }
     }
     :hover{
         h2, p{color: #000;}
-        box-shadow: 0px 0px 20px gray;
+        box-shadow: 0px 0px 20px #eeeeef;
         z-index: 5;
     }
 `;

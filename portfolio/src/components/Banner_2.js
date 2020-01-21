@@ -1,32 +1,18 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
-import Contact from './Contact';
 import styled from 'styled-components';
+import Skills from './Skills';
 
-const MainPage =()=>{
-    const [showContact, setShowContact] = useState(false || true);
-    const showHideClassName = showContact ? "contact display-open" : "contact display-none";
-
-    const handleClick = e => {
-        e.preventDefault();
-        setShowContact(true);
-    };
-    const handleClose = e => {
-        e.preventDefault();
-        setShowContact(false);
-    };
+const MainPage = () =>{
 
     return (
-        <AboutContainer id='mainpage'>
-            <div>
-                <h2>About Me</h2>
-                <p>From preschool teaching to coding.</p>
-                <button onClick={handleClick}>CONTACT</button>
+        <AboutContainer id='2'>
+            <h6>STATS&EXPERIENCE</h6>
+            <Skills/>
+            <div>               
+                <button>VIEW RESUME</button>
+                <button>VIEW RESUME</button>
             </div>
-            <div className={showHideClassName} >
-                {/* <Contact handleClose={handleClose}/> */}
-            </div>
-            
         </AboutContainer>
     )
 }
@@ -34,24 +20,26 @@ const MainPage =()=>{
 export default MainPage;
 
 const AboutContainer = styled.section`
-    margin: auto;
     background: #000;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     width: 100vw;
     height: 60vh;
-    padding: 5px 0;    
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h6{text-align: left; margin-left: 4%}
     button{
-        background: none;
-        padding: 15px;
-        color: #eeeeef;
-        border: 1px solid #eeeef;
+        margin: 11px;
+        background: #eeeeef;
+        padding: 15px 10px;
+        border: none;
         font-size: 1rem;
     }
     button:hover{
         color: #fff;
-        cursor: pointer;;
+        background: red;
+        cursor: pointer;
     }
 
 `;

@@ -31,15 +31,15 @@ body{
   display: flex;
   justify-content: flex-end;
   text-decoration: none;
-  background: #fff;
+  background: #000;
 }
 #navbar ul{
   display: flex;
   justify-content: space-evenly;
-  width: 40%;
+  width: 30%;
 }
 #navbar ul a{
-  color: #9b9b9c;
+  color: #fff;
   text-decoration: none;
   list-style: none;
   font-size: 1.2rem;
