@@ -19,19 +19,19 @@ function App() {
     <div className="App">
       <header className="App-header">
       <Router>
-          <nav id="navbar">
-            <ul>
-                <Link to='/bio'><a href="#1"><li>Bio</li></a></Link>
-                <Link to='/skills'><a href="#2"><li>Skills</li></a></Link>
-                <Link to='/projects'><a href="#3"><li>Projects</li></a></Link>
-                </ul>
-          </nav>
-          <div className = 'body'>
-            <Banner_Home/>
-            <Banner_1 className='banner-wrapper'/>
-            <Banner_2 />
-            <Banner_3/>
-          </div>
+        <nav id="navbar">
+          <ul>
+            <a href="#1"><li>ABOUT</li></a>
+            <a href="#2"><li>SKILLS</li></a>
+            <a href="#3"><li>PROJECTS</li></a>
+          </ul>
+        </nav>
+        <div className = 'body'>
+          <Banner_Home/>
+          <Banner_1 className='banner-wrapper'/>
+          <Banner_2 />
+          <Banner_3/>
+        </div>
       </Router>         
       </header>
     </div>

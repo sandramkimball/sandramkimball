@@ -65,6 +65,7 @@ export default Projects;
 
 const ProjectsContainer = styled.section`
     width: 100vw;
+    height: 90vh;
     margin: 0 auto;
     display: flex;
     justify-content: center; 
