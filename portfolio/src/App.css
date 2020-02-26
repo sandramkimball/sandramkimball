@@ -1,5 +1,6 @@
 body{
   margin: 0 auto;
+  overflow-x: hidden;
 }
 .App {
   width: 100vw;
@@ -15,7 +16,7 @@ body{
   margin: 0 auto;
 }
 .App .banner-wrapper{
-  height: 100vh;
+  height: 100%;
   width: 30vw;
   align-self: center;
   margin: auto;

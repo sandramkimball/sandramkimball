@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import styled from 'styled-components';
 import Skills from './Skills';
 import my_resume from '../images/Resume.pdf'
@@ -37,11 +36,11 @@ const AboutContainer = styled.section`
         padding: 15px 10px;
         border: none;
         font-size: 1rem;
+        cursor: pointer;
     }
     button:hover{
-        color: #fff;
-        background: red;
-        cursor: pointer;
+        background-color: red;
+        a{color: #eeeeeef}
     }
    
 
