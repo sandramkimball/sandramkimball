@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import {useTransition, animated} from 'react-spring'
 
 //images
 import homepage from '../images/tinyHomepage.png';
@@ -7,11 +8,33 @@ import icnst from '../images/icnst.png';
 import sautidb3 from '../images/sautidb3.png';
 import stylist from '../images/stylist-find.png';
 
+const pages = [
+        ({style}) => <animated.img src={homepage} style={{width: '25vw', cursor: 'pointer'}}></animated.img>,
+        ({style}) => <animated.img src={icnst} style={{width: '25vw', cursor: 'pointer'}}></animated.img>,
+        ({style}) => <animated.img src={sautidb3} style={{width: '25vw', cursor: 'pointer'}}></animated.img>,
+        ({style}) => <animated.img src={stylist} style={{width: '25vw', cursor: 'pointer'}}></animated.img>,
+]
+
 const Projects = () => {
+    const [index, set] = useState(0)
+    const onClick = (()=> set(state=> (state + 1) % 4), [])
+    const transitions = useTransition(index, p => p, {
+        from: {opacity: 0, transform: 'translated3d(100%, 0, 0'},
+        enter: {opacity: 1, transform: 'translated3d(0%, 0, 0'},
+        leave: {opacity: 0, transform: 'translated3d(-50%, 0, 0'},
+    })
+
     return (
         <ProjectsContainer id='3'> 
             <h6>PROJECTS</h6>
-            <div class='projects-container'>
+            <div className='projects-container' onClick={onClick}>
+                {transitions.map(({item, props, key}) => {
+                    const Page = pages[item]
+                    return <Page key={key} style={props}/>
+                })}
+            </div>
+            
+            {/* <div class='projects-container'>
                 <Project>
                     <a href='https://foodie-fun-app.netlify.com/?_ga=2.228749211.602302675.1567105491-253791327.1567105491' target="_blank">
                         <img src={homepage}/>
@@ -51,12 +74,7 @@ const Projects = () => {
                         </div>
                     </a>
                 </Project>
-            </div>
-                
-            <script>
-                {/* let pg3 = document.querySelectorAll('#pg3');
-                TweenLite.from(pg3, 4, {opacity: 0, x: 50}); */}
-            </script>
+            </div> */}
         </ProjectsContainer>
     )
 }
@@ -70,8 +88,10 @@ const ProjectsContainer = styled.section`
     display: flex;
     justify-content: center; 
     background: #f7f7f7;  
+    position: absolute;
+    will-change: transform, opacity;
     .projects-container{
-        margin: 100px 0;
+        margin: auto;
         display: flex; 
         justify-content: center;  
         width: 90%;   

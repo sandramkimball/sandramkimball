@@ -32,10 +32,6 @@ const LeftBar = () => {
                     </a>
                 </div>
             </div>
-            <script>
-                {/* let homebase = document.querySelectorAll('.banner div');
-                TweenLite.from(homebase, 4, {opacity: 0, x: -50}); */}
-            </script>
         </Sec1>
     )
 }

@@ -1,47 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
-import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab, faNode, faCss3Alt, faHtml5, faReact, faJs, faPython } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
+import {useTransition, animated} from 'react-spring'
 
 
 const Skills  = () => {
+    const [items, set] =setState([...])
+    const transitions = useTransition(items, item => item.key, {
+        from: {transform: 'translate3d(0, -40px, 0'},
+        enter: {transform: 'translate3d(0, 0px, 0'},
+    })
+
     return(
         <SkillList>
             <ul>
-                <li>
+                <animated.li key={key} style={props}>
                     <FontAwesomeIcon icon={faHtml5} />
                     <p>HTML</p>
-                </li>
-                <li>
+                </animated.li>
+                <animated.li key={key} style={props}>
                     <FontAwesomeIcon icon={faCss3Alt}/>
                     <p>CSS</p>
-                </li>
-                <li>
+                </animated.li>
+                <animated.li key={key} style={props}>
                     <FontAwesomeIcon icon={faJs} />
                     <p>JS</p>
-                </li>
-                <li>
+                </animated.li>
+                <animated.li key={key} style={props}>
                     <FontAwesomeIcon icon={faReact} />
                     <p>REACTJS</p>
-                </li>   
-                <li>
+                </animated.li>   
+                <animated.li key={key} style={props}>
                     <FontAwesomeIcon icon={faNode} />
                     <p>NODE</p>
-                </li>
-                <li>
+                </animated.li>
+                <animated.li key={key} style={props}>
                     <FontAwesomeIcon icon={faDatabase} />
                     <p>SQL</p>
-                </li>
-                <li>
+                </animated.li>
+                <animated.li key={key} style={props}>
                     <FontAwesomeIcon icon={faServer} />
                     <p>GRAPHQL</p>
-                </li>
-                <li>
+                </animated.li>
+                <animated.li key={key} style={props}>
                     <FontAwesomeIcon icon={faPython} />
                     <p>PYTHON</p>
-                </li>
+                </animated.li>
             </ul>
             <script>
                 {/* let pg2 = document.querySelectorAll('#pg2');

@@ -4,15 +4,14 @@ import {useSpring, animated} from 'react-spring';
 
 const HomeBanner = () => {
 
-    // const props = useSpring({
-    //     from: {width: 0},
-    //     to: {width}
-    // })
+    const props = useSpring({opacity: 1, from: {opacity: 0}})
     return (
-        <Home>
-            <h1>SANDRA KIMBALL</h1>
-            <h3>Full Stack Web Developer</h3>
-        </Home>
+        <animated.div style={props}>
+            <Home>
+                <h1>SANDRA KIMBALL</h1>
+                <h3>Full Stack Web Developer</h3>
+            </Home>
+        </animated.div>
     )
 }
 

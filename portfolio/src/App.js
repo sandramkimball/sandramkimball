@@ -1,11 +1,8 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import './App.css';
+// import {useSpring, animated} from 'react-spring';
+
 
 //components
 import Banner_Home from './components/Banner_Home';
@@ -15,6 +12,9 @@ import Banner_3 from './components/Banner_3';
 
 
 function App() {
+  // const [props, set, stop] = useSpring(()=> {})
+
+
   return (
     <div className="App">
       <header className="App-header">
