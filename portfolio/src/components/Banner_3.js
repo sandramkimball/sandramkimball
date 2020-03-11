@@ -8,29 +8,30 @@ import icnst from '../images/icnst.png';
 import sautidb3 from '../images/sautidb3.png';
 import stylist from '../images/stylist-find.png';
 
-const pages = [
-        ({style}) => <animated.img src={homepage} style={{width: '25vw', cursor: 'pointer'}}></animated.img>,
-        ({style}) => <animated.img src={icnst} style={{width: '25vw', cursor: 'pointer'}}></animated.img>,
-        ({style}) => <animated.img src={sautidb3} style={{width: '25vw', cursor: 'pointer'}}></animated.img>,
-        ({style}) => <animated.img src={stylist} style={{width: '25vw', cursor: 'pointer'}}></animated.img>,
+const slides = [
+        ({style}) => <animated.img src={stylist} style={{...style, height: '60vh', cursor: 'pointer'}}></animated.img>,
+        ({style}) => <animated.img src={homepage} style={{...style, height: '80vh', cursor: 'pointer'}}></animated.img>,
+        ({style}) => <animated.img src={icnst} style={{...style, height: '60vh', cursor: 'pointer'}}></animated.img>,
+        ({style}) => <animated.img src={sautidb3} style={{...style, height: '60vh', cursor: 'pointer'}}></animated.img>,
 ]
 
 const Projects = () => {
     const [index, set] = useState(0)
-    const onClick = (()=> set(state=> (state + 1) % 4), [])
+    const handleClick = () => (set(state => (state + 1) % 4), [])
     const transitions = useTransition(index, p => p, {
         from: {opacity: 0, transform: 'translated3d(100%, 0, 0'},
         enter: {opacity: 1, transform: 'translated3d(0%, 0, 0'},
         leave: {opacity: 0, transform: 'translated3d(-50%, 0, 0'},
     })
 
+
     return (
         <ProjectsContainer id='3'> 
             <h6>PROJECTS</h6>
-            <div className='projects-container' onClick={onClick}>
-                {transitions.map(({item, props, key}) => {
-                    const Page = pages[item]
-                    return <Page key={key} style={props}/>
+            <div className='projects-container' onClick={handleClick}>
+                {transitions.map( ({item, props, key}) => {
+                    const Slide = slides[item]
+                    return <Slide key={key} style={props}/>
                 })}
             </div>
             

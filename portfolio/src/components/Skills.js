@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab, faNode, faCss3Alt, faHtml5, faReact, faJs, faPython } from '@fortawesome/free-brands-svg-icons'
@@ -7,52 +7,33 @@ import {useTransition, animated} from 'react-spring'
 
 
 const Skills  = () => {
-    const [items, set] =setState([...])
+    const [items, set] = useState([])
     const transitions = useTransition(items, item => item.key, {
         from: {transform: 'translate3d(0, -40px, 0'},
         enter: {transform: 'translate3d(0, 0px, 0'},
+        leave: {transform: 'translate3d(0, -40px, 0'},
     })
+
+    const skillsList = [
+        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faHtml5}/><p>HTML</p></animated.li>,
+        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faCss3Alt}/><p>CSS</p></animated.li>,
+        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faJs}/><p>JS</p></animated.li>,
+        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faReact}/><p>REACTJS</p></animated.li>,
+        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faNode}/><p>NODE</p></animated.li>,
+        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faDatabase}/><p>SQL</p></animated.li>,
+        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faServer}/><p>GRAPHQL</p></animated.li>,
+        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faPython}/><p>PYTHON</p></animated.li>,
+
+    ]
 
     return(
         <SkillList>
             <ul>
-                <animated.li key={key} style={props}>
-                    <FontAwesomeIcon icon={faHtml5} />
-                    <p>HTML</p>
-                </animated.li>
-                <animated.li key={key} style={props}>
-                    <FontAwesomeIcon icon={faCss3Alt}/>
-                    <p>CSS</p>
-                </animated.li>
-                <animated.li key={key} style={props}>
-                    <FontAwesomeIcon icon={faJs} />
-                    <p>JS</p>
-                </animated.li>
-                <animated.li key={key} style={props}>
-                    <FontAwesomeIcon icon={faReact} />
-                    <p>REACTJS</p>
-                </animated.li>   
-                <animated.li key={key} style={props}>
-                    <FontAwesomeIcon icon={faNode} />
-                    <p>NODE</p>
-                </animated.li>
-                <animated.li key={key} style={props}>
-                    <FontAwesomeIcon icon={faDatabase} />
-                    <p>SQL</p>
-                </animated.li>
-                <animated.li key={key} style={props}>
-                    <FontAwesomeIcon icon={faServer} />
-                    <p>GRAPHQL</p>
-                </animated.li>
-                <animated.li key={key} style={props}>
-                    <FontAwesomeIcon icon={faPython} />
-                    <p>PYTHON</p>
-                </animated.li>
+                {transitions.map(({item, key, props}) => {
+                    const SkillsList = skillsList[item]
+                    return <SkillsList key={key} style={props}/>
+                })}
             </ul>
-            <script>
-                {/* let pg2 = document.querySelectorAll('#pg2');
-                TweenLite.from(pg2, 4, {opacity: 0, x: 50}); */}
-            </script>
         </SkillList>
 )}
 
