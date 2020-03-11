@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import {useTransition, animated} from 'react-spring'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fab, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+
 
 //images
 import homepage from '../images/tinyHomepage.png';
@@ -58,6 +61,7 @@ const Projects = () => {
                     return <Slide key={key} style={props}/>
                 })}
             </div>
+            <FontAwesomeIcon icon={faChevronRight} onClick={handleClick}/>
         </ProjectsContainer>
     )
 }
@@ -73,11 +77,20 @@ const ProjectsContainer = styled.section`
     background: #f7f7f7;  
     position: absolute;
     will-change: transform, opacity;
+    svg{
+        font-size: 4rem; 
+        color: gray;
+        margin-top: 20%;
+        margin-right: 4%;
+        cursor: pointer;
+        :hover{color: red}
+    }
     .projects-container{
         margin: auto;
         justify-content: center;  
         height: 80vh; 
     }
+    h6{text-align: left; margin-left: 4%}
     img{
         height: 60vh;
     }
@@ -89,43 +102,5 @@ const ProjectsContainer = styled.section`
         justify-content: center;
         color: black;
         :hover{color: gray}
-    }
-`;
-
-const Project = styled.div`
-    margin: 1.5rem;
-    height: 440px;
-    width: 380px;
-    border: 1px solid #eeeeef;
-    a{ 
-        font-family: 'Roboto', sans-serif;        
-        transform: none;
-        text-decoration: none;
-        align-items: center;
-        justify-content: center;
-        
-        div{
-            color: #000;
-            width: 90%;
-            margin: auto;
-            h2{
-                font-size: 1.25rem;
-                padding: 0;
-                margin-top: 1.5rem;
-                text-align: left;
-            }
-            p{
-                color: gray;
-                font-size: 1rem;
-                text-align: left;
-                padding: 0;
-                margin: 0;
-            }
-        }
-    }
-    :hover{
-        h2, p{color: #000;}
-        box-shadow: 0px 0px 20px #eeeeef;
-        z-index: 5;
     }
 `;
