@@ -17,12 +17,16 @@ const skills = [
 ]
 
 const Skills  = () => {
-    const [items, set] = useState([...skills])
-    const transitions = useTransition(items, item => item, {
-            from: { transform: 'translate3d(0,-40px,0)' },
-            enter: { transform: 'translate3d(0,0px,0)' },
-        })
+    const [items, set] = useState(skills)
 
+    const transitions = useTransition(items, item => item.name, {
+        immediate: false,
+        from: { transform: 'translate3d(0,-40px,0)', opacity: 0 },
+        enter: {transform: 'translate3d(0,0px,0)', opacity: 1},
+        
+    })
+
+// onFrame: frame => {( {enter: {transform: 'translate3d(0,0px,0)', opacity: 1} } )}
 
     return(
         <SkillList>
@@ -54,13 +58,13 @@ const SkillList = styled.div`
         flex-direction: row;
         justify-content: center;
         li{ 
-            width: 10%;
+            width: 20%;
             list-style: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-            p{padding: 0; margin: 0; font-size: 1.125rem}
-            svg{font-size: 4rem; padding-bottom: 5px}
+            p{padding: 0; margin: 0; font-size: 1.75rem}
+            svg{font-size: 6rem; padding-bottom: 5px}
             background-color: #101010eb;
             border-radius: 4px;
             padding: 4px 0;
@@ -68,7 +72,3 @@ const SkillList = styled.div`
         }    
 }`
 
-// {transitions.map(({ skill, key, props }) => {
-//     const SkillsList = skillsList[skill]
-//     return <SkillsList key={key} style={props}/>
-// })}

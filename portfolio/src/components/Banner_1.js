@@ -18,7 +18,7 @@ const LeftBar = () => {
                 <h6>SCHOOL</h6>
                 <p>Lambda School</p>
                 <h6>LOCATION</h6>
-                <p>North San Diego, Ca</p>
+                <p>San Diego, Ca - North County</p>
                 <h6>CONNECT</h6>
                 <div className = 'connect-links'>
                     <a href="https://www.linkedin.com/in/sandy-kimball-9b7461192/" target="_blank">
@@ -43,7 +43,7 @@ const Sec1 = styled.section`
     justify-content: center;
     margin: auto;
     height: 100vh;
-    width: 70vw;
+    width: 70%;
     .pic-title{    
         display: flex;
         align-items: center;

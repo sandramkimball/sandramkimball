@@ -54,9 +54,8 @@ const Projects = () => {
 
     return (
         <ProjectsContainer id='3'> 
-            <h6>PROJECTS</h6>
             <FontAwesomeIcon icon={faChevronLeft} onClick={handleBackClick}/>
-            <div className='projects-container'>
+            <div className='container'>
                 {transitions.map( ({item, props, key}) => {
                     const Slide = slides[item]
                     return <Slide key={key} style={props}/>
@@ -70,28 +69,26 @@ const Projects = () => {
 export default Projects;
 
 const ProjectsContainer = styled.section`
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center; 
     background: #f7f7f7;  
-    position: absolute;
+    // position: absolute;
     will-change: transform, opacity;
     svg{
         font-size: 4rem; 
         color: gray;
-        margin-top: 20%;
-        margin-right: 4%;
+        margin: 20% 5% 0 5%;
         cursor: pointer;
         :hover{color: red}
     }
-    .projects-container{
+    .container{
         margin: auto;
         justify-content: center;  
         height: 80vh; 
     }
-    h6{text-align: left; margin-left: 4%}
     img{
         height: 60vh;
     }

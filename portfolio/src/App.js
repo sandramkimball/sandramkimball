@@ -12,8 +12,6 @@ import Banner_3 from './components/Banner_3';
 
 
 function App() {
-  // const [props, set, stop] = useSpring(()=> {})
-
 
   return (
     <div className="App">
@@ -26,7 +24,7 @@ function App() {
             <a href="#3"><li>PROJECTS</li></a>
           </ul>
         </nav>
-        <div className = 'body'>
+        <div id = 'body'>
           <Banner_Home/>
           <Banner_1 className='banner-wrapper'/>
           <Banner_2 />
