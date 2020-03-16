@@ -5,41 +5,41 @@ import { fab, faNode, faCss3Alt, faHtml5, faReact, faJs, faPython } from '@forta
 import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
 import {useTransition, animated} from 'react-spring'
 
+const skills = [
+    {f_icon: faHtml5, name:'HTML'},
+    {f_icon: faCss3Alt, name:'CSS'},
+    {f_icon: faJs, name:'JS'},
+    {f_icon: faReact, name:'REACTJS'},
+    {f_icon: faNode, name:'NODE'},
+    {f_icon: faDatabase, name:'SQL'},
+    {f_icon: faServer, name:'GRAPHQL'},
+    {f_icon: faPython, name:'PYTHON'},
+]
 
 const Skills  = () => {
-    const [items, set] = useState([])
-    const transitions = useTransition(items, item => item.key, {
-        from: {transform: 'translate3d(0, -40px, 0'},
-        enter: {transform: 'translate3d(0, 0px, 0'},
-        leave: {transform: 'translate3d(0, -40px, 0'},
-    })
+    const [items, set] = useState([...skills])
+    const transitions = useTransition(items, item => item, {
+            from: { transform: 'translate3d(0,-40px,0)' },
+            enter: { transform: 'translate3d(0,0px,0)' },
+        })
 
-    const skillsList = [
-        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faHtml5}/><p>HTML</p></animated.li>,
-        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faCss3Alt}/><p>CSS</p></animated.li>,
-        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faJs}/><p>JS</p></animated.li>,
-        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faReact}/><p>REACTJS</p></animated.li>,
-        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faNode}/><p>NODE</p></animated.li>,
-        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faDatabase}/><p>SQL</p></animated.li>,
-        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faServer}/><p>GRAPHQL</p></animated.li>,
-        ({style}) => <animated.li style={{...style}}><FontAwesomeIcon icon={faPython}/><p>PYTHON</p></animated.li>,
-
-    ]
 
     return(
         <SkillList>
             <ul>
-                {transitions.map(({item, key, props}) => {
-                    const SkillsList = skillsList[item]
-                    return <SkillsList key={key} style={props}/>
-                })}
+            {transitions.map( ({ item, key, props }) => (
+                <animated.li key={key} style={props}> 
+                    <FontAwesomeIcon icon={item.f_icon}/>
+                    <p>{item.name}</p>
+                </animated.li>
+            ))}
             </ul>
         </SkillList>
 )}
 
 export default Skills;
 
-const SkillList = styled.section`
+const SkillList = styled.div`
     margin: 5px auto;
     padding: 0 0 11px 0;
     width: 60%;
@@ -67,3 +67,8 @@ const SkillList = styled.section`
             margin: 0 4px;
         }    
 }`
+
+// {transitions.map(({ skill, key, props }) => {
+//     const SkillsList = skillsList[skill]
+//     return <SkillsList key={key} style={props}/>
+// })}

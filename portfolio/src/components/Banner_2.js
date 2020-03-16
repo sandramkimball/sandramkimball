@@ -23,7 +23,7 @@ const AboutContainer = styled.section`
     color: #fff;
     font-family: 'Roboto', sans-serif;
     width: 100vw;
-    height: 90vh;
+    height: 60vh;
     padding: 11px 0;
     display: flex;
     flex-direction: column;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import profile_bw from '../images/profile-bw.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
 
 const LeftBar = () => {
     return (
