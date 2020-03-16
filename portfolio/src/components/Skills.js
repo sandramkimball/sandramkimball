@@ -1,58 +1,49 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
-import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab, faNode, faCss3Alt, faHtml5, faReact, faJs, faPython } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
+import {useTransition, animated} from 'react-spring'
 
+const skills = [
+    {f_icon: faHtml5, name:'HTML'},
+    {f_icon: faCss3Alt, name:'CSS'},
+    {f_icon: faJs, name:'JS'},
+    {f_icon: faReact, name:'REACTJS'},
+    {f_icon: faNode, name:'NODE'},
+    {f_icon: faDatabase, name:'SQL'},
+    {f_icon: faServer, name:'GRAPHQL'},
+    {f_icon: faPython, name:'PYTHON'},
+]
 
 const Skills  = () => {
+    const [items, set] = useState(skills)
+
+    const transitions = useTransition(items, item => item.name, {
+        immediate: false,
+        from: { transform: 'translate3d(0,-40px,0)', opacity: 0 },
+        enter: {transform: 'translate3d(0,0px,0)', opacity: 1},
+        
+    })
+
+// onFrame: frame => {( {enter: {transform: 'translate3d(0,0px,0)', opacity: 1} } )}
+
     return(
         <SkillList>
             <ul>
-                <li>
-                    <FontAwesomeIcon icon={faHtml5} />
-                    <p>HTML</p>
-                </li>
-                <li>
-                    <FontAwesomeIcon icon={faCss3Alt}/>
-                    <p>CSS</p>
-                </li>
-                <li>
-                    <FontAwesomeIcon icon={faJs} />
-                    <p>JS</p>
-                </li>
-                <li>
-                    <FontAwesomeIcon icon={faReact} />
-                    <p>REACTJS</p>
-                </li>   
-                <li>
-                    <FontAwesomeIcon icon={faNode} />
-                    <p>NODE</p>
-                </li>
-                <li>
-                    <FontAwesomeIcon icon={faDatabase} />
-                    <p>SQL</p>
-                </li>
-                <li>
-                    <FontAwesomeIcon icon={faServer} />
-                    <p>GRAPHQL</p>
-                </li>
-                <li>
-                    <FontAwesomeIcon icon={faPython} />
-                    <p>PYTHON</p>
-                </li>
+            {transitions.map( ({ item, key, props }) => (
+                <animated.li key={key} style={props}> 
+                    <FontAwesomeIcon icon={item.f_icon}/>
+                    <p>{item.name}</p>
+                </animated.li>
+            ))}
             </ul>
-            <script>
-                {/* let pg2 = document.querySelectorAll('#pg2');
-                TweenLite.from(pg2, 4, {opacity: 0, x: 50}); */}
-            </script>
         </SkillList>
 )}
 
 export default Skills;
 
-const SkillList = styled.section`
+const SkillList = styled.div`
     margin: 5px auto;
     padding: 0 0 11px 0;
     width: 60%;
@@ -67,16 +58,17 @@ const SkillList = styled.section`
         flex-direction: row;
         justify-content: center;
         li{ 
-            width: 10%;
+            width: 20%;
             list-style: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-            p{padding: 0; margin: 0; font-size: 1.125rem}
-            svg{font-size: 4rem; padding-bottom: 5px}
+            p{padding: 0; margin: 0; font-size: 1.75rem}
+            svg{font-size: 6rem; padding-bottom: 5px}
             background-color: #101010eb;
             border-radius: 4px;
             padding: 4px 0;
             margin: 0 4px;
         }    
 }`
+

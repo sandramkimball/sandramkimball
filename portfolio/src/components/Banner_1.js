@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import profile_bw from '../images/profile-bw.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
 
 const LeftBar = () => {
     return (
@@ -19,7 +18,7 @@ const LeftBar = () => {
                 <h6>SCHOOL</h6>
                 <p>Lambda School</p>
                 <h6>LOCATION</h6>
-                <p>North San Diego, Ca</p>
+                <p>San Diego, Ca - North County</p>
                 <h6>CONNECT</h6>
                 <div className = 'connect-links'>
                     <a href="https://www.linkedin.com/in/sandy-kimball-9b7461192/" target="_blank">
@@ -32,10 +31,6 @@ const LeftBar = () => {
                     </a>
                 </div>
             </div>
-            <script>
-                {/* let homebase = document.querySelectorAll('.banner div');
-                TweenLite.from(homebase, 4, {opacity: 0, x: -50}); */}
-            </script>
         </Sec1>
     )
 }
@@ -48,7 +43,7 @@ const Sec1 = styled.section`
     justify-content: center;
     margin: auto;
     height: 100vh;
-    width: 70vw;
+    width: 70%;
     .pic-title{    
         display: flex;
         align-items: center;

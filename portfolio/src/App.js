@@ -1,11 +1,8 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import './App.css';
+// import {useSpring, animated} from 'react-spring';
+
 
 //components
 import Banner_Home from './components/Banner_Home';
@@ -15,6 +12,7 @@ import Banner_3 from './components/Banner_3';
 
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -26,7 +24,7 @@ function App() {
             <a href="#3"><li>PROJECTS</li></a>
           </ul>
         </nav>
-        <div className = 'body'>
+        <div id = 'body'>
           <Banner_Home/>
           <Banner_1 className='banner-wrapper'/>
           <Banner_2 />

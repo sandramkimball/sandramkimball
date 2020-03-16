@@ -7,7 +7,6 @@ const MainPage = () =>{
 
     return (
         <AboutContainer id='2'>
-            <h6>STATS&EXPERIENCE</h6>
             <Skills/>
             <div>               
                 <button><a href={my_resume} target='_blank'>VIEW RESUME</a></button>
@@ -22,13 +21,12 @@ const AboutContainer = styled.section`
     background: #000;
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    width: 100vw;
+    width: 100%;
     height: 60vh;
     padding: 11px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    h6{text-align: left; margin-left: 4%}
+    justify-content: center;
     a{text-decoration: none; color: #000}
     button{
         margin: 11px;
