@@ -50,10 +50,23 @@
 /* --- MEDIA --- */
 
 @media only screen and (max-width: 1024px){
-  /* banner 2 + skills */
-  /* .tech-stack ul{
-    flex-wrap: wrap;
-  } */
+  /* banner 1 */
+  .pic-title{width: 40% !important;}
+  .skills-container{width: 40% !important}
+  .skills-container h6{font-size: 2rem !important}
+  .skills-container p{font-size:1.5rem !important}
+  .skills-container svg{font-size:1.5rem !important}
+
+
+  /* banner 3 */
+  .pj-container img{
+    max-width: 60vw;
+    max-height: 50vh;
+    object-fit: contain;
+  }
+  .pj-container h2{font-size: 3rem;}
+  .pj-container p{font-size: 2rem; max-width: 60vw !important;}
+
 }
 
 @media only screen and (max-width: 850px) {
@@ -77,19 +90,8 @@
   
 
   /* banner 1 */
-  .pic-title{
-    width: 40%;
-  }
-  .skills-container{
-    width: 40%
-  }
-
-  /* banner 3 */
-  .pj-container img{
-    max-width: 60vw;
-    max-height: 50vh;
-    object-fit: contain;
-  }
+  .skills-container h6{font-size: 1.25rem !important}
+  .skills-container p{font-size:1rem !important}
 
 }
 
@@ -131,13 +133,9 @@
     width: 40% !important
   }
 
-
   /* banner 3 */
-  /* .pj-container img{
-    max-width: 60vw;
-    max-height: 50vh;
-    object-fit: contain;
-  } */
+  .pj-container h2{font-size: 1.25rem;}
+  .pj-container p{display: none}
 
 }
 
