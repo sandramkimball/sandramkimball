@@ -43,27 +43,23 @@ const Sec1 = styled.section`
     justify-content: center;
     margin: auto;
     height: 100vh;
-    width: 70%;
+    width: 90%;
     .pic-title{    
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;    
+        width: 20%;
         img{
-            width: 20vw;
+            width: 100%;
             height: 60vh;
             object-fit: cover;
             object-position: top;
-        }
-        h1, h2{
-            text-align: left;
-            font-family: 'Roboto', sans-serif; 
-            font-size: 1.75rem;
-            margin: 0 auto;
-        }       
+        }    
     }
     .skills-container{
         text-align: left;
+        width: 20%;
         margin-left: 10px
         p{padding: 0; margin: 0 0 15px 0}
         h6{
@@ -86,4 +82,18 @@ const Sec1 = styled.section`
         };
         svg{font-size: 1.125rem}
     }
+    
+    @media only screen and(max-width: 1050px){
+        .pic-title{
+            width: 45%
+        }
+        .skills-container{
+            width: 45%
+        }
+        .pic-title img{
+            height: 50vh;
+            object-fit: contain;
+        }
+    }
+
 `

@@ -46,16 +46,17 @@ export default Skills;
 const SkillList = styled.div`
     margin: 5px auto;
     padding: 0 0 11px 0;
-    width: 60%;
+    width: 90%;
     display: flex;    
     flex-direction: column;
     justify-content: center;
-    h5{text-align: center; color: red}
     ul{
         margin: 0;
         padding:0;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+
         justify-content: center;
         li{ 
             width: 20%;
@@ -68,7 +69,18 @@ const SkillList = styled.div`
             background-color: #101010eb;
             border-radius: 4px;
             padding: 4px 0;
-            margin: 0 4px;
+            margin: 4px;
         }    
-}`
+    }
+    @media only screen and(max-width: 1050px){
+        ul{
+            flex-wrap: wrap;
+            color: red;
+            li{
+                color: red;
+
+            }
+        }
+    }
+`
 

@@ -9,6 +9,7 @@ import homepage from '../images/tinyHomepage.png';
 import icnst from '../images/icnst.png';
 import sautidb3 from '../images/sautidb3.png';
 import stylist from '../images/stylist-find.png';
+import mars from '../images/mars-explor.png';
 
 const slides = [
     ({style}) => <animated.div style={{...style, cursor: 'pointer'}}>
@@ -39,14 +40,21 @@ const slides = [
                         <p>Built a SQL database, populated it with dummy data, and used it in a front end application designed as a professional platform for hairstylists to self promote.</p>
                     </a>
                     </animated.div>,
+    ({style}) => <animated.div style={{...style, cursor: 'pointer'}}>
+    <a>
+        <img src={mars}/>
+        <h2>Coming Soon</h2>
+        <p>Online Python/Django maze game.</p>
+    </a>
+    </animated.div>,
 ]
 
 const Projects = () => {
     const [index, set] = useState(0)
-    const handleClick = () => (set(state => (state + 1) % 4), [])
-    const handleBackClick = () => (set(state => (state + 3) % 4), [])
+    const handleClick = () => (set(state => (state + 1) % 5), [])
+    const handleBackClick = () => (set(state => (state + 3) % 5), [])
     const transitions = useTransition(index, p => p, {
-        from: {opacity: 0, transform: 'translated3d(50%, 0, 0'},
+        from: {opacity: 0, transform: 'translated3d( 100%, 0, 0'},
         enter: {opacity: 1, transform: 'translated3d(0%, 0, 0'},
         leave: {opacity: 0, transform: 'translated3d(-100%, 0, 0'},
     })
@@ -55,7 +63,7 @@ const Projects = () => {
     return (
         <ProjectsContainer id='3'> 
             <FontAwesomeIcon icon={faChevronLeft} onClick={handleBackClick}/>
-            <div className='container'>
+            <div className='pj-container'>
                 {transitions.map( ({item, props, key}) => {
                     const Slide = slides[item]
                     return <Slide key={key} style={props}/>
@@ -75,7 +83,6 @@ const ProjectsContainer = styled.section`
     display: flex;
     justify-content: center; 
     background: #f7f7f7;  
-    // position: absolute;
     will-change: transform, opacity;
     svg{
         font-size: 4rem; 
@@ -84,7 +91,7 @@ const ProjectsContainer = styled.section`
         cursor: pointer;
         :hover{color: red}
     }
-    .container{
+    .pj-container{
         margin: auto;
         justify-content: center;  
         height: 80vh; 
@@ -98,8 +105,18 @@ const ProjectsContainer = styled.section`
         text-decoration: none;
         align-items: center;
         justify-content: center;
+        margin: auto;
         color: black;
         :hover{color: gray}
     }
-    p{width: 50vw}
+    p{max-width: 50vw;margin: auto;}
+
+    @media only screen and(max-width: 900px){
+        .pj-container img{
+            max-width: 60vw;
+        }
+        p{
+            color: red;
+        }
+    }
 `;
