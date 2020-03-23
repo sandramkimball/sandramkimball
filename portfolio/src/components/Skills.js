@@ -70,5 +70,15 @@ const SkillList = styled.div`
             padding: 4px 0;
             margin: 0 4px;
         }    
-}`
+    }
+    @media only screen and(max-width: 1050px){
+        width: 70%;
+        margin: auto;
+        ul{
+            flex-wrap: wrap;
+            li{
+                margin: 2px;
+            }
+        }
+    }`
 

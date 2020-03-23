@@ -11,21 +11,22 @@ const HomeBanner = () => {
     })
 
     return (
-        <animated.div style={props}>
-            <Home>
+        <Home>
+            <animated.div style={props}>
                 <h1>SANDRA KIMBALL</h1>
                 <h3>Full Stack Web Developer</h3>
-            </Home>
-        </animated.div>
+            </animated.div> 
+        </Home>
     )
 }
 
 const Home = styled.div`
     height: 100vh;
     background-color: #eeeeef;
-    margin: 0;
-    h1{font-size: 6rem; margin-left: 20%; padding-top: 25vh; text-align: left;}
-    h3{font-size: 3rem; padding: 0; margin-right: 20%; text-align: right}
+    margin: auto;
+    text-align: center;
+    h1{font-size: 6rem; margin: 0; padding-top: 25vh; }
+    h3{font-size: 3rem; padding: 0;}
 `;
 
-export default HomeBanner;
+export default HomeBanner;  
