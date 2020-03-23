@@ -56,14 +56,19 @@
   } */
 }
 
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 850px) {
   /* navbar */
   #navbar {
     justify-content: center;
     width: 100vw;
   }
+  #navbar ul{
+    width: 100%;
+    padding: 0;
+    align-items: center;
+  }
   #navbar ul a{
-    margin: 0 2px;
+    margin: 2px;
   }
 
   /*home title */
@@ -90,7 +95,8 @@
 
 @media only screen and (max-width: 420px){
   /*home title */
-  .home-banner h1{font-size: 3.5rem}
+  .home-banner h1{font-size: 3.5rem !important}
+  .home-banner h3{font-size: 1.5rem !important}
   
   
   /* banner 1 */
@@ -98,27 +104,31 @@
     flex-direction: column;
   }
   .pic-title{
-    width: 90%;
+    width: 90% !important; 
     margin: auto;
   }
   .pic-title img{
-    height: 30vh;
-    width: 50vw;
+    height: 30vh !important;
+    width: 50vw !important;
   }
   .skills-container{
-    width: 90%;
+    width: 90% !important;
     margin: auto;
   }
 
+
   /* banner 2 + skills */
+  .banner-2 {
+    height: 100vh !important;
+  }
   .tech-stack ul svg{
-    font-size: 4rem
+    font-size: 4rem !important
   }
   .tech-stack ul p{
-    font-size: 1rem
+    font-size: 1rem !important
   }
   .tech-stack ul li{
-    width: 40%
+    width: 40% !important
   }
 
 
