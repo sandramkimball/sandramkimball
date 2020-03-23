@@ -6,7 +6,7 @@ import my_resume from '../images/Resume.pdf'
 const MainPage = () =>{
 
     return (
-        <AboutContainer id='2'>
+        <AboutContainer id='2' className='banner-2'>
             <Skills/>
             <div>               
                 <button><a href={my_resume} target='_blank'>VIEW RESUME</a></button>
