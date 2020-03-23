@@ -29,7 +29,7 @@ const Skills  = () => {
 // onFrame: frame => {( {enter: {transform: 'translate3d(0,0px,0)', opacity: 1} } )}
 
     return(
-        <SkillList>
+        <SkillList className='tech-stack'>
             <ul>
             {transitions.map( ({ item, key, props }) => (
                 <animated.li key={key} style={props}> 
@@ -72,15 +72,6 @@ const SkillList = styled.div`
             margin: 4px;
         }    
     }
-    @media only screen and(max-width: 1050px){
-        ul{
-            flex-wrap: wrap;
-            color: red;
-            li{
-                color: red;
-
-            }
-        }
-    }
+   
 `
 

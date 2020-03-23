@@ -46,11 +46,90 @@
   color: red;
 }
 
+
+/* --- MEDIA --- */
+
+@media only screen and (max-width: 1024px){
+  /* banner 2 + skills */
+  /* .tech-stack ul{
+    flex-wrap: wrap;
+  } */
+}
+
 @media only screen and (max-width: 850px){
+  /* navbar */
   #navbar {
     justify-content: center;
+    width: 100vw;
   }
   #navbar ul a{
     margin: 0 2px;
   }
+
+  /*home title */
+  .home-banner h1{width: 80%}
+  .home-banner h3{font-size: 2rem}
+  
+
+  /* banner 1 */
+  .pic-title{
+    width: 40%;
+  }
+  .skills-container{
+    width: 40%
+  }
+
+  /* banner 3 */
+  .pj-container img{
+    max-width: 60vw;
+    max-height: 50vh;
+    object-fit: contain;
+  }
+
 }
+
+@media only screen and (max-width: 420px){
+  /*home title */
+  .home-banner h1{font-size: 3.5rem}
+  
+  
+  /* banner 1 */
+  .banner-1{
+    flex-direction: column;
+  }
+  .pic-title{
+    width: 90%;
+    margin: auto;
+  }
+  .pic-title img{
+    height: 30vh;
+    width: 50vw;
+  }
+  .skills-container{
+    width: 90%;
+    margin: auto;
+  }
+
+  /* banner 2 + skills */
+  .tech-stack ul svg{
+    font-size: 4rem
+  }
+  .tech-stack ul p{
+    font-size: 1rem
+  }
+  .tech-stack ul li{
+    width: 40%
+  }
+
+
+  /* banner 3 */
+  /* .pj-container img{
+    max-width: 60vw;
+    max-height: 50vh;
+    object-fit: contain;
+  } */
+
+}
+
+
+

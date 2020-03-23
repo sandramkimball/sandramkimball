@@ -6,9 +6,9 @@ import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const LeftBar = () => {
     return (
-        <Sec1 id='1'>
+        <Sec1 id='1' className='banner-1'>
             <div className='pic-title'>
-                <img src={profile_bw} alt='girl, a web developer'/>
+                <img src={profile_bw} alt='a girl smiling'/>
             </div>
             <div className='skills-container'>
                 <h6>NAME</h6>
@@ -45,10 +45,6 @@ const Sec1 = styled.section`
     height: 100vh;
     width: 90%;
     .pic-title{    
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;    
         width: 20%;
         img{
             width: 100%;
@@ -81,19 +77,6 @@ const Sec1 = styled.section`
             :hover{color: red}
         };
         svg{font-size: 1.125rem}
-    }
-    
-    @media only screen and(max-width: 1050px){
-        .pic-title{
-            width: 45%
-        }
-        .skills-container{
-            width: 45%
-        }
-        .pic-title img{
-            height: 50vh;
-            object-fit: contain;
-        }
     }
 
 `
