@@ -63,7 +63,7 @@ const Projects = () => {
     return (
         <ProjectsContainer id='3'> 
             <FontAwesomeIcon icon={faChevronLeft} onClick={handleBackClick}/>
-            <div className='container'>
+            <div className='pj-container'>
                 {transitions.map( ({item, props, key}) => {
                     const Slide = slides[item]
                     return <Slide key={key} style={props}/>
@@ -91,7 +91,7 @@ const ProjectsContainer = styled.section`
         cursor: pointer;
         :hover{color: red}
     }
-    .container{
+    .pj-container{
         margin: auto;
         justify-content: center;  
         height: 80vh; 
@@ -111,11 +111,12 @@ const ProjectsContainer = styled.section`
     }
     p{max-width: 50vw;margin: auto;}
 
-    @media only screen and(max-width: 1050px){
-        a img{
-            height: 45vh;
-            max-width: 80vw;
+    @media only screen and(max-width: 900px){
+        .pj-container img{
+            max-width: 60vw;
+        }
+        p{
+            color: red;
         }
     }
-
 `;

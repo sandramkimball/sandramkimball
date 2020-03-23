@@ -49,7 +49,7 @@ const Sec1 = styled.section`
         align-items: center;
         justify-content: center;
         flex-direction: column;    
-        width: 40%;
+        width: 20%;
         img{
             width: 100%;
             height: 60vh;
@@ -59,7 +59,7 @@ const Sec1 = styled.section`
     }
     .skills-container{
         text-align: left;
-        width: 40%;
+        width: 20%;
         margin-left: 10px
         p{padding: 0; margin: 0 0 15px 0}
         h6{
@@ -82,9 +82,15 @@ const Sec1 = styled.section`
         };
         svg{font-size: 1.125rem}
     }
+    
     @media only screen and(max-width: 1050px){
+        .pic-title{
+            width: 45%
+        }
+        .skills-container{
+            width: 45%
+        }
         .pic-title img{
-            // width: 20vw;
             height: 50vh;
             object-fit: contain;
         }
