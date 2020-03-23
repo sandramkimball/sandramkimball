@@ -6,7 +6,7 @@ import { fab, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-
 
 //images
 import homepage from '../images/tinyHomepage.png';
-import icnst from '../images/icnst.png';
+import icnst from '../images/icnst.jpg';
 import sautidb3 from '../images/sautidb3.png';
 import stylist from '../images/stylist-find.png';
 import mars from '../images/mars-explor.png';
@@ -52,7 +52,7 @@ const slides = [
 const Projects = () => {
     const [index, set] = useState(0)
     const handleClick = () => (set(state => (state + 1) % 5), [])
-    const handleBackClick = () => (set(state => (state + 3) % 5), [])
+    const handleBackClick = () => (set(state => (state + 4) % 5), [])
     const transitions = useTransition(index, p => p, {
         from: {opacity: 0, transform: 'translated3d( 100%, 0, 0'},
         enter: {opacity: 1, transform: 'translated3d(0%, 0, 0'},
@@ -87,7 +87,7 @@ const ProjectsContainer = styled.section`
     svg{
         font-size: 4rem; 
         color: gray;
-        margin: 20% 5% 0 5%;
+        margin: auto 5%;
         cursor: pointer;
         :hover{color: red}
     }
@@ -110,13 +110,4 @@ const ProjectsContainer = styled.section`
         :hover{color: gray}
     }
     p{max-width: 50vw;margin: auto;}
-
-    @media only screen and(max-width: 900px){
-        .pj-container img{
-            max-width: 60vw;
-        }
-        p{
-            color: red;
-        }
-    }
 `;
