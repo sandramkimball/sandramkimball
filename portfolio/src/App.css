@@ -134,8 +134,12 @@
   }
 
   /* banner 3 */
-  .pj-container h2{font-size: 1.25rem;}
-  .pj-container p{display: none}
+  /* .pj-container h2{font-size: 1.25rem;}
+  .pj-container p{display: none} */
+  .pj-container{display: none}
+  .pj-container svg{display: none}
+  .pj-container-2{display: initial !important}
+  .banner-3{height: 100% !important}
 
 }
 

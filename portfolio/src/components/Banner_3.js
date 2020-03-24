@@ -61,13 +61,51 @@ const Projects = () => {
 
 
     return (
-        <ProjectsContainer id='3'> 
+        <ProjectsContainer id='3' className='banner-3'> 
             <FontAwesomeIcon icon={faChevronLeft} onClick={handleBackClick}/>
             <div className='pj-container'>
                 {transitions.map( ({item, props, key}) => {
                     const Slide = slides[item]
                     return <Slide key={key} style={props}/>
                 })}
+            </div>
+
+            <div className='pj-container-2'>
+                <div>
+                    <a href='https://foodie-fun-app.netlify.com/?_ga=2.228749211.602302675.1567105491-253791327.1567105491' target="_blank">
+                        <img src={homepage}/>
+                        <h2>Foodie Fun UI</h2>
+                        <p>Collaborated with a UX designer to build a marketing site for a food blog app.</p>
+                    </a>
+                </div>
+                <div>
+                    <a href='https://icnst-development.netlify.com/' target="_blank">  
+                        <img src={icnst}/> 
+                        <h2>Child Nutrition Tracker</h2>
+                        <p>Worked in collabe with a senior React developer to build out components, forms, routes for an application designed to help doctors in foreign nations log and chart health information for patients.</p>
+                    </a>
+                </div>
+                <div>
+                    <a href='https://sauti.now.sh/' target="_blank">
+                        <img src={sautidb3}/>
+                        <h2>Sauti Traders</h2>
+                        <p>Worked on a team of five with a non-profit organization to deliver a cross-filtration search platform for traders data collected by the organization.</p>
+                    </a>
+                </div>
+                <div>
+                    <a href='https://stylistfind.now.sh/' target="_blank">
+                        <img src={stylist}/>
+                        <h2>Stylist Find</h2>
+                        <p>Built a SQL database, populated it with dummy data, and used it in a front end application designed as a professional platform for hairstylists to self promote.</p>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <img src={mars}/>
+                        <h2>Coming Soon</h2>
+                        <p>Online Python/Django maze game.</p>
+                    </a>
+                </div>
             </div>
             <FontAwesomeIcon icon={faChevronRight} onClick={handleClick}/>
         </ProjectsContainer>
@@ -79,10 +117,10 @@ export default Projects;
 const ProjectsContainer = styled.section`
     width: 100%;
     height: 100vh;
-    margin: 0 auto;
+    padding: 10vh auto;
     display: flex;
     justify-content: center; 
-    background: #f7f7f7;  
+    background: #e7e7e7;  
     will-change: transform, opacity;
     svg{
         font-size: 4rem; 
@@ -110,4 +148,18 @@ const ProjectsContainer = styled.section`
         :hover{color: gray}
     }
     p{max-width: 50vw;margin: auto;}
+    .pj-container-2{
+        display: none
+        img{
+            width: 90vw;
+            height: 100%;
+            object-fit: contain;
+        }
+        p{display: none}
+        h2{margin-bottom: 10vh; margin: auto}
+        div{
+            margin: 8vh auto;
+        }
+    }
+
 `;
