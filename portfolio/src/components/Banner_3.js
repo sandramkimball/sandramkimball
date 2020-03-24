@@ -74,35 +74,35 @@ const Projects = () => {
                 <div>
                     <a href='https://foodie-fun-app.netlify.com/?_ga=2.228749211.602302675.1567105491-253791327.1567105491' target="_blank">
                         <img src={homepage}/>
-                        <h2>Foodie Fun UI</h2>
+                        <h2>FOODIE FUN</h2>
                         <p>Collaborated with a UX designer to build a marketing site for a food blog app.</p>
                     </a>
                 </div>
                 <div>
                     <a href='https://icnst-development.netlify.com/' target="_blank">  
                         <img src={icnst}/> 
-                        <h2>Child Nutrition Tracker</h2>
+                        <h2>CHILD NUTRITION TRACKER</h2>
                         <p>Worked in collabe with a senior React developer to build out components, forms, routes for an application designed to help doctors in foreign nations log and chart health information for patients.</p>
                     </a>
                 </div>
                 <div>
                     <a href='https://sauti.now.sh/' target="_blank">
                         <img src={sautidb3}/>
-                        <h2>Sauti Traders</h2>
+                        <h2>SAUTI TRADERS</h2>
                         <p>Worked on a team of five with a non-profit organization to deliver a cross-filtration search platform for traders data collected by the organization.</p>
                     </a>
                 </div>
                 <div>
                     <a href='https://stylistfind.now.sh/' target="_blank">
                         <img src={stylist}/>
-                        <h2>Stylist Find</h2>
+                        <h2>STYLIST FIND</h2>
                         <p>Built a SQL database, populated it with dummy data, and used it in a front end application designed as a professional platform for hairstylists to self promote.</p>
                     </a>
                 </div>
                 <div>
                     <a>
                         <img src={mars}/>
-                        <h2>Coming Soon</h2>
+                        <h2>COMING SOON</h2>
                         <p>Online Python/Django maze game.</p>
                     </a>
                 </div>
@@ -148,18 +148,24 @@ const ProjectsContainer = styled.section`
         :hover{color: gray}
     }
     p{max-width: 50vw;margin: auto;}
+
+
     .pj-container-2{
         display: none
-        img{
-            width: 90vw;
-            height: 100%;
-            object-fit: contain;
+        div{
+            width: 95vw;
+            height: 40vh;
+            margin: 8vh auto;
+            box-shadow: 0px 3px 10px gray;
+            background: #f7f7f7
+        }
+        div img{
+            width: 100%;
+            height: 30vh;
+            object-fit: cover;
         }
         p{display: none}
-        h2{margin-bottom: 10vh; margin: auto}
-        div{
-            margin: 8vh auto;
-        }
+        h2{margin: auto; color: gray; padding-top: 15px; font-weight: 400}
     }
 
 `;
