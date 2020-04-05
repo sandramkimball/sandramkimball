@@ -56,7 +56,6 @@ const SkillList = styled.div`
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
         justify-content: center;
         li{ 
             width: 20%;
@@ -68,7 +67,7 @@ const SkillList = styled.div`
             svg{font-size: 6rem; padding-bottom: 5px}
             background-color: #101010eb;
             border-radius: 4px;
-            padding: 4px 0;
+            padding: 20px 0;
             margin: 4px;
         }    
     }

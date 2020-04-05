@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import {useTransition, animated} from 'react-spring'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import Card from './Card'
 
 //images
 import homepage from '../images/tinyHomepage.png';
@@ -10,104 +10,92 @@ import icnst from '../images/icnst.jpg';
 import sautidb3 from '../images/sautidb3.png';
 import stylist from '../images/stylist-find.png';
 import mars from '../images/mars-explor.png';
-
-const slides = [
-    ({style}) => <animated.div style={{...style, cursor: 'pointer'}}>
-                <a href='https://foodie-fun-app.netlify.com/?_ga=2.228749211.602302675.1567105491-253791327.1567105491' target="_blank">
-                    <img src={homepage}/>
-                    <h2>Foodie Fun UI</h2>
-                    <p>Collaborated with a UX designer to build a marketing site for a food blog app.</p>
-                </a>
-                </animated.div>,
-    ({style}) => <animated.div style={{...style, cursor: 'pointer'}}>
-                <a href='https://icnst-development.netlify.com/' target="_blank">  
-                    <img src={icnst}/> 
-                    <h2>Child Nutrition Tracker</h2>
-                    <p>Worked in collabe with a senior React developer to build out components, forms, routes for an application designed to help doctors in foreign nations log and chart health information for patients.</p>
-                </a>
-                </animated.div>,
-    ({style}) => <animated.div style={{...style,cursor: 'pointer'}}>
-                <a href='https://sauti.now.sh/' target="_blank">
-                    <img src={sautidb3}/>
-                    <h2>Sauti Traders</h2>
-                    <p>Worked on a team of five with a non-profit organization to deliver a cross-filtration search platform for traders data collected by the organization.</p>
-                </a>
-                </animated.div>,
-    ({style}) => <animated.div style={{...style, cursor: 'pointer'}}>
-                    <a href='https://stylistfind.now.sh/' target="_blank">
-                        <img src={stylist}/>
-                        <h2>Stylist Find</h2>
-                        <p>Built a SQL database, populated it with dummy data, and used it in a front end application designed as a professional platform for hairstylists to self promote.</p>
-                    </a>
-                    </animated.div>,
-    ({style}) => <animated.div style={{...style, cursor: 'pointer'}}>
-    <a>
-        <img src={mars}/>
-        <h2>Coming Soon</h2>
-        <p>Online Python/Django maze game.</p>
-    </a>
-    </animated.div>,
-]
-
-const Projects = () => {
-    const [index, set] = useState(0)
-    const handleClick = () => (set(state => (state + 1) % 5), [])
-    const handleBackClick = () => (set(state => (state + 4) % 5), [])
-    const transitions = useTransition(index, p => p, {
-        from: {opacity: 0, transform: 'translated3d( 100%, 0, 0'},
-        enter: {opacity: 1, transform: 'translated3d(0%, 0, 0'},
-        leave: {opacity: 0, transform: 'translated3d(-100%, 0, 0'},
-    })
+import toDo from '../images/reducer-todo.png'
 
 
+
+const Projects = () => {    
+    const projects = [
+        {
+            id: 1,
+            index: 0,
+            href: 'https://foodie-fun-app.netlify.com/?_ga=2.228749211.602302675.1567105491-253791327.1567105491',
+            img: homepage,
+            title: 'FOODIE FUN',
+            text: 'Collaborated with a UX designer to build a marketing site for a food blog app.'
+        },
+        {
+            id: 2, 
+            index: 1,
+            href: 'https://icnst-development.netlify.com/',
+            img: icnst,
+            title: 'CHILD NUTRITION TRACKER',
+            text: 'Collaborated with a senior React developer for an application to help doctors in foreign nations log and chart health information for patients.'
+        },
+        {
+            id: 3,
+            index: 2,
+            href: 'https://sauti.now.sh/',
+            img: sautidb3,
+            title: 'SAUTI TRADERS',
+            text: 'Worked on a team of five with a non-profit organization to deliver a cross-filtration search platform for traders data collected by the organization.'
+        },
+        {
+            id: 4,
+            index: 3,
+            href: 'https://stylistfind.now.sh/',
+            img: stylist,
+            title: 'STYLIST FIND',
+            text: 'Built a Node database and React front end application designed as a professional platform for hairstylists to self promote.'
+        },
+        {
+            id: 5,
+            index: 4,
+            href: 'https://reducer-todo.sandramkimball.now.sh/',
+            img: toDo,
+            title: 'TO DO LIST',
+            text: 'A simple to do list where you can add and delete items using Redux.'
+        },
+        {
+            id: 6,
+            index: 5,
+            href: null,
+            img: mars,
+            title: 'COMING SOON',
+            text: 'Online Python/Django adventure game.'
+        }
+    ]
+    const [project, setProject] = useState(projects[0])
+    console.log(project.index)
+
+    const handleNext = () => {
+        const newIndex = project.index+1
+        if(newIndex === projects.length-1){
+            // setProject(projects[0])
+            return
+        } else {            
+            setProject(projects[newIndex])
+        }
+    }
+
+    const handleBack = () => {
+        const newIndex = project.index-1
+        if(project.index === 0){
+            return
+        } else {            
+            setProject(projects[newIndex])
+        }
+    }
+    
     return (
-        <ProjectsContainer id='3' className='banner-3'> 
-            <FontAwesomeIcon icon={faChevronLeft} onClick={handleBackClick}/>
-            <div className='pj-container'>
-                {transitions.map( ({item, props, key}) => {
-                    const Slide = slides[item]
-                    return <Slide key={key} style={props}/>
-                })}
+        <ProjectsContainer id='3' className={`banner-3`}> 
+            <FontAwesomeIcon icon={faChevronLeft} onClick={handleBack} className='left'/>
+            <div className='pj-container' 
+                style={{'transform': `translateX(-${project.index*(100/projects.length)}%)`}}
+            >
+                {projects.map(obj=> <Card key={obj.id} obj={obj}/> )}
             </div>
-
-            <div className='pj-container-2'>
-                <div>
-                    <a href='https://foodie-fun-app.netlify.com/?_ga=2.228749211.602302675.1567105491-253791327.1567105491' target="_blank">
-                        <img src={homepage}/>
-                        <h2>FOODIE FUN</h2>
-                        <p>Collaborated with a UX designer to build a marketing site for a food blog app.</p>
-                    </a>
-                </div>
-                <div>
-                    <a href='https://icnst-development.netlify.com/' target="_blank">  
-                        <img src={icnst}/> 
-                        <h2>CHILD NUTRITION TRACKER</h2>
-                        <p>Worked in collabe with a senior React developer to build out components, forms, routes for an application designed to help doctors in foreign nations log and chart health information for patients.</p>
-                    </a>
-                </div>
-                <div>
-                    <a href='https://sauti.now.sh/' target="_blank">
-                        <img src={sautidb3}/>
-                        <h2>SAUTI TRADERS</h2>
-                        <p>Worked on a team of five with a non-profit organization to deliver a cross-filtration search platform for traders data collected by the organization.</p>
-                    </a>
-                </div>
-                <div>
-                    <a href='https://stylistfind.now.sh/' target="_blank">
-                        <img src={stylist}/>
-                        <h2>STYLIST FIND</h2>
-                        <p>Built a SQL database, populated it with dummy data, and used it in a front end application designed as a professional platform for hairstylists to self promote.</p>
-                    </a>
-                </div>
-                <div>
-                    <a>
-                        <img src={mars}/>
-                        <h2>COMING SOON</h2>
-                        <p>Online Python/Django maze game.</p>
-                    </a>
-                </div>
-            </div>
-            <FontAwesomeIcon icon={faChevronRight} onClick={handleClick}/>
+            <FontAwesomeIcon icon={faChevronRight} onClick={()=> handleNext()} className='right'/>
         </ProjectsContainer>
     )
 }
@@ -117,25 +105,29 @@ export default Projects;
 const ProjectsContainer = styled.section`
     width: 100%;
     height: 100vh;
-    padding: 10vh auto;
+    margin: 0 auto;
     display: flex;
+    flex-direction: row;   
     justify-content: center; 
     background: #e7e7e7;  
-    will-change: transform, opacity;
+    position: relative;
+    overflow-x: hidden; 
+    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     svg{
         font-size: 4rem; 
         color: gray;
-        margin: auto 5%;
+        padding: 0 20px;
         cursor: pointer;
-        :hover{color: red}
+        z-index: 10;
+        height: 100vh;
+        position: absolute;
+        :hover{color: #fff; background: #22222250}
     }
-    .pj-container{
-        margin: auto;
-        justify-content: center;  
-        height: 80vh; 
+    .right{
+        right: 0
     }
-    img{
-        height: 60vh;
+    .left{
+        left: 0
     }
     a{ 
         font-family: 'Roboto', sans-serif;        
@@ -146,26 +138,16 @@ const ProjectsContainer = styled.section`
         margin: auto;
         color: black;
         :hover{color: gray}
-    }
-    p{max-width: 50vw;margin: auto;}
-
-
-    .pj-container-2{
-        display: none
-        div{
-            width: 95vw;
-            height: 40vh;
-            margin: 8vh auto;
-            box-shadow: 0px 3px 10px gray;
-            background: #f7f7f7
+    }    
+    .pj-container{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        height: 80vh; 
+        width: 90vw;
+        ::-webkit-scrollbar{
+            width: 0;
         }
-        div img{
-            width: 100%;
-            height: 30vh;
-            object-fit: cover;
-        }
-        p{display: none}
-        h2{margin: auto; color: gray; padding-top: 15px; font-weight: 400}
     }
-
 `;
