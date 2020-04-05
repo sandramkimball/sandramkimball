@@ -66,10 +66,12 @@ const Projects = () => {
         }
     ]
     const [project, setProject] = useState(projects[0])
+    console.log(project.index)
 
     const handleNext = () => {
         const newIndex = project.index+1
         if(newIndex === projects.length-1){
+            // setProject(projects[0])
             return
         } else {            
             setProject(projects[newIndex])
@@ -78,7 +80,7 @@ const Projects = () => {
 
     const handleBack = () => {
         const newIndex = project.index-1
-        if(newIndex === 0){
+        if(project.index === 0){
             return
         } else {            
             setProject(projects[newIndex])
@@ -86,10 +88,9 @@ const Projects = () => {
     }
     
     return (
-        <ProjectsContainer id='3' className={`banner-3 active-slide-${project.index}`}> 
+        <ProjectsContainer id='3' className={`banner-3`}> 
             <FontAwesomeIcon icon={faChevronLeft} onClick={handleBack} className='left'/>
-            <div 
-                className='pj-container' 
+            <div className='pj-container' 
                 style={{'transform': `translateX(-${project.index*(100/projects.length)}%)`}}
             >
                 {projects.map(obj=> <Card key={obj.id} obj={obj}/> )}
@@ -104,19 +105,18 @@ export default Projects;
 const ProjectsContainer = styled.section`
     width: 100%;
     height: 100vh;
-    padding: 10vh auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;   
     justify-content: center; 
     background: #e7e7e7;  
     position: relative;
     overflow-x: hidden; 
-    transition: transform 300ms  cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     svg{
         font-size: 4rem; 
         color: gray;
-        padding: 0 10px;
-        margin: auto 5%;
+        padding: 0 20px;
         cursor: pointer;
         z-index: 10;
         height: 100vh;
@@ -124,21 +124,10 @@ const ProjectsContainer = styled.section`
         :hover{color: #fff; background: #22222250}
     }
     .right{
-        right: -5rem
+        right: 0
     }
     .left{
-        left: -5rem
-    }    
-    .pj-container{
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        height: 80vh; 
-        width: 90vw;
-        ::-webkit-scrollbar{
-            width: 0;
-        }
+        left: 0
     }
     a{ 
         font-family: 'Roboto', sans-serif;        
@@ -149,5 +138,16 @@ const ProjectsContainer = styled.section`
         margin: auto;
         color: black;
         :hover{color: gray}
+    }    
+    .pj-container{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        height: 80vh; 
+        width: 90vw;
+        ::-webkit-scrollbar{
+            width: 0;
+        }
     }
 `;

@@ -93,6 +93,33 @@
   .skills-container h6{font-size: 1.25rem !important}
   .skills-container p{font-size:1rem !important}
 
+  /* banner 3 */
+  .banner-3{
+    background: #fff !important
+  }
+  .banner-3 .pj-container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column !important;
+    height: 100%; 
+    width: 100vw;
+  }
+  .banner-3 h2{
+    font-size: 1.5rem;
+    margin-bottom: 0
+  }
+  .banner-3 SVG{
+    display: none;
+  }
+  .proj-card{
+    margin: 5vh auto !important;
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0px 2px 3px gray;
+    background: #e7e7e7; 
+  }
+  .proj-card p {display: none}
+
 }
 
 @media only screen and (max-width: 420px){
@@ -134,16 +161,19 @@
   }
 
   /* banner 3 */
-  .banner-3{height: 100% !important}
-  .banner-3 p{display: none}
-  /* .pj-container div{
-    width: 95vw;
-    height: 40vh;
-    margin: 8vh auto;
-    box-shadow: 0px 3px 10px gray;
-    background: #f7f7f7
-    }
-  .pj-container h2{margin: auto; color: gray; padding-top: 15px; font-weight: 400}   */
+  .banner-3 .pj-container{
+    display: inherit !important;
+    height: 100%;
+    width: 95vw !important;
+  }
+  .proj-card{
+    width: 95vw !important;
+    padding: 20px 0;
+  }
+  .proj-card a img{
+    max-width: none;
+    width: 100% !important;
+  }
 
 }
 

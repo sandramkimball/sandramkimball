@@ -4,7 +4,7 @@ import React from 'react'
 
 const Card = (props) => {
     return (
-        <Proj>
+        <Proj className='proj-card'>
             <a href={props.obj.href} target="_blank">  
                 <img src={props.obj.img}/> 
                 <h2>{props.obj.title}</h2>
