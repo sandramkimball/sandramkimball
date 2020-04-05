@@ -134,12 +134,16 @@
   }
 
   /* banner 3 */
-  /* .pj-container h2{font-size: 1.25rem;}
-  .pj-container p{display: none} */
-  .pj-container{display: none}
-  .pj-container svg{display: none}
-  .pj-container-2{display: initial !important}
   .banner-3{height: 100% !important}
+  .banner-3 p{display: none}
+  /* .pj-container div{
+    width: 95vw;
+    height: 40vh;
+    margin: 8vh auto;
+    box-shadow: 0px 3px 10px gray;
+    background: #f7f7f7
+    }
+  .pj-container h2{margin: auto; color: gray; padding-top: 15px; font-weight: 400}   */
 
 }
 
