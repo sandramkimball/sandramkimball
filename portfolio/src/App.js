@@ -9,6 +9,7 @@ import Banner_Home from './components/Banner_Home';
 import Banner_1 from './components/Banner_1';
 import Banner_2 from './components/Banner_2';
 import Banner_3 from './components/Banner_3';
+import Popup from './components/Popup';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Banner_1 className='banner-wrapper'/>
           <Banner_2 />
           <Banner_3/>
+          <Popup/>
         </div>
       </Router>         
       </header>
