@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import Card from './Card'
-import ProjectSlides from './ProjectSlides'
+import projects from './ProjectSlides'
 
-const Projects = ({ProjectSlides}) => {    
-    const [project, setProject] = useState(ProjectSlides[0])
+const Projects = () => {    
+    const [project, setProject] = useState(projects[0])
     console.log(project.index)
 
     const handleNext = () => {
@@ -31,7 +31,7 @@ const Projects = ({ProjectSlides}) => {
         <ProjectsContainer id='3' className={`banner-3`}> 
             <FontAwesomeIcon icon={faChevronLeft} onClick={handleBack} className='left'/>
             <div className='pj-container' 
-                style={{'transform': `translateX(-${project.index*(100/projects.length)}%)`}}
+                style={{'transform': `translateX(-${project.index*(100/projects.length)+5}%)`}}
             >
                 {projects.map(obj=> <Card key={obj.id} obj={obj}/> )}
             </div>
@@ -45,7 +45,7 @@ export default Projects;
 const ProjectsContainer = styled.section`
     width: 100%;
     height: 100vh;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     flex-direction: row;   
     justify-content: center; 
@@ -80,11 +80,11 @@ const ProjectsContainer = styled.section`
         :hover{color: gray}
     }    
     .pj-container{
-        margin: 0 auto;
+        margin: auto;
         display: flex;
         flex-direction: row;
         position: absolute;
-        height: 80vh; 
+        height: 100%; 
         width: 90vw;
         ::-webkit-scrollbar{
             width: 0;

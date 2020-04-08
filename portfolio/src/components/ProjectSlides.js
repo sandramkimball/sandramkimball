@@ -7,14 +7,15 @@ import stylist from '../images/stylist-find.png';
 import mars from '../images/mars-explor.png';
 import toDo from '../images/reducer-todo.png'
 
-export default ProjectSlides = [
+const projects = [
     {
         id: 1,
         index: 0,
         href: 'https://foodie-fun-app.netlify.com/?_ga=2.228749211.602302675.1567105491-253791327.1567105491',
         img: homepage,
         title: 'FOODIE FUN',
-        text: 'Collaborated with a UX designer to build a marketing site for a food blog app.'
+        text: 'Marketing site for a food blogger app. 1 week sprint working with a frontend and UX developer',
+        stack: 'Html | Css'
     },
     {
         id: 2, 
@@ -22,7 +23,8 @@ export default ProjectSlides = [
         href: 'https://icnst-development.netlify.com/',
         img: icnst,
         title: 'CHILD NUTRITION TRACKER',
-        text: 'Collaborated with a senior React developer for an application to help doctors in foreign nations log and chart health information for patients.'
+        text: 'Collaborated with a senior React developer for an application to help doctors in foreign nations log and chart health information for patients. 1 week sprint. Worked with a FE developer and UX designer',
+        stack: 'Redux | Html | Css'
     },
     {
         id: 3,
@@ -30,7 +32,8 @@ export default ProjectSlides = [
         href: 'https://sauti.now.sh/',
         img: sautidb3,
         title: 'SAUTI TRADERS',
-        text: 'Worked on a team of five with a non-profit organization to deliver a cross-filtration search platform for traders data collected by the organization.'
+        text: 'Build-on project for a non-profit consensus organisation for informal cross-border traders in Africa. 2 month sprint with a team of 5. Worked on data parser, csv downloader, filter form and functionality.',
+        stack: 'ReactJs | Nivo | CsvDownloader | GraphQL | Html | Css'
     },
     {
         id: 4,
@@ -38,7 +41,8 @@ export default ProjectSlides = [
         href: 'https://stylistfind.now.sh/',
         img: stylist,
         title: 'STYLIST FIND',
-        text: 'Built a Node database and React front end application designed as a professional platform for hairstylists to self promote.'
+        text: 'Professional platform for hair stylists and clients to connect through reviews, portfolios and search options. Personal side project.',
+        stack: 'ReactJs | NodeJs | JsonWebToken | Html | Css'
     },
     {
         id: 5,
@@ -46,7 +50,8 @@ export default ProjectSlides = [
         href: 'https://reducer-todo.sandramkimball.now.sh/',
         img: toDo,
         title: 'TO DO LIST',
-        text: 'A simple to do list where you can add and delete items using Redux.'
+        text: 'A simple to do list where you can add and delete items using Redux. 1 day sprint, solo.',
+        stack: 'Redux | Html | Css'
     },
     {
         id: 6,
@@ -54,22 +59,9 @@ export default ProjectSlides = [
         href: null,
         img: mars,
         title: 'COMING SOON',
-        text: 'Online Python/Django adventure game.'
-    },
-    {
-        id: 7,
-        index: 0,
-        href: 'https://foodie-fun-app.netlify.com/?_ga=2.228749211.602302675.1567105491-253791327.1567105491',
-        img: homepage,
-        title: 'FOODIE FUN',
-        text: 'Collaborated with a UX designer to build a marketing site for a food blog app.'
-    },
-    {
-        id: 8, 
-        index: 1,
-        href: 'https://icnst-development.netlify.com/',
-        img: icnst,
-        title: 'CHILD NUTRITION TRACKER',
-        text: 'Collaborated with a senior React developer for an application to help doctors in foreign nations log and chart health information for patients.'
+        text: 'Online Python/Django adventure game. Personal side project.',
+        stack: 'Python3 | Django | Html | Css'
     },
 ]
+
+export default projects

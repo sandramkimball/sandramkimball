@@ -8,6 +8,7 @@ const Card = (props) => {
             <a href={props.obj.href} target="_blank">  
                 <img src={props.obj.img}/> 
                 <h2>{props.obj.title}</h2>
+                <p className='stack'>{props.obj.stack}</p>
                 <p>{props.obj.text}</p>
             </a>
         </Proj>
@@ -17,7 +18,7 @@ const Card = (props) => {
 export default Card
 
 const Proj = Styled.div`
-    margin: auto 2vw;
+    margin: 15vh 2vw 0 2vw;
     transition: opacity 300ms linear;
     img{
         height: 30vh;
@@ -28,6 +29,7 @@ const Proj = Styled.div`
         max-width: 45vh;
         margin: auto;
         font-size: 1rem;
+        text-align: left;
     }
     a{ 
         font-family: 'Roboto', sans-serif;        
@@ -38,5 +40,9 @@ const Proj = Styled.div`
         margin: auto;
         color: black;
         :hover{color: gray}
+    }
+    .stack{
+        color: gray;
+        font-style: italic;
     }
 `;
