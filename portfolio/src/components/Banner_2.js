@@ -1,16 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Skills from './Skills';
-import my_resume from '../images/Resume.pdf'
 
 const MainPage = () =>{
 
     return (
         <AboutContainer id='2' className='banner-2'>
             <Skills/>
-            <div>               
-                <button><a href={my_resume} target='_blank'>VIEW RESUME</a></button>
-            </div>
         </AboutContainer>
     )
 }
@@ -22,8 +18,7 @@ const AboutContainer = styled.section`
     color: #fff;
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    height: 80vh;
-    padding: 11px 0;
+    padding: 5vh 0;
     display: flex;
     flex-direction: column;
     justify-content: center;

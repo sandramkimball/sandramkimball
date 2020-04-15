@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import profile_bw from '../images/profile.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Contact from './Contact';
 
-const LeftBar = () => {
+const Banner_1 = () => {
+    const[status, setStatus] = useState('none');
+    const openEmail = e => {
+        e.preventDefault();
+        setStatus('inherit')
+    }
+
     return (
-        <Sec1 id='1' className='banner-1'>
+        <Banner id='1' className='banner-1'>
+            <Contact status={status} setStatus={setStatus}/>
             <div className='pic-title'>
                 <img src={profile_bw} alt='a girl smiling'/>
             </div>
@@ -33,13 +42,13 @@ const LeftBar = () => {
                     </a>
                 </div>
             </div>
-        </Sec1>
+        </Banner>
     )
 }
 
-export default LeftBar;
+export default Banner_1;
 
-const Sec1 = styled.section`
+const Banner = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,9 +85,15 @@ const Sec1 = styled.section`
             align-items: center;
             display: flex;
             flex-direction: column;
+            cursor: pointer;
             :hover{color: red}
         };
         svg{font-size: 1.125rem}
     }
-
+    .contact-open{
+        display: inherit;
+    }
+    .contact-close{
+        display: hidden;
+    }
 `

@@ -1,34 +1,52 @@
-import React from 'react';
+import React, {useState} from 'react';
+import gmailAPI from 'react-gmail'
 import styled from 'styled-components';
 
-const Contact = ({handleClose}) => {
+const Contact = ({status, setStatus}) => {
+    const [state, setState] = useState({
+        senderName: '',
+        senderEmail: '',
+        message: '',
+    })
+    const closeEmail = e => {
+        e.preventDefault()
+        setStatus('none')
+    }
+    const handleChange = e => {
+        e.preventDefault()
+        setState({[e.target.name]: e.target.value})
+    }
 
     return (
-        <Banner>
-            <FormContainer>
-                <div>
-                    <button onClick={handleClose} className='close_button'>X</button> 
-                    <h3>Talk to Me</h3>
-                </div>
-                <div>
-                    <form id='contact-form' method='post' action='contact-form.php'>
-                        <input 
-                            name='name'
-                            class='name'
-                            type="text" 
-                            placeholder='Name'
-                        />
-                        <input 
-                            name='email'
-                            class='email'
-                            type="text" 
-                            placeholder='Email'
-                        />
-                        <textarea name='message' class='message' row='4' placeholder='Message'></textarea>
+        <Banner style={{'display': `${status}`}}>
+            <h3>Contact Sandy</h3>
+            <div>
+                <form id='contact-form' method='post' action='contact-form.php'>
+                    <input 
+                        name='senderName'
+                        value='senderName'
+                        type="text" 
+                        placeholder='Your Name'
+                        onChange={handleChange}
+                    />
+                    <input 
+                        name='senderName'
+                        type="text" 
+                        placeholder='Your Email'
+                        onChange={handleChange}
+                    />
+                    <textarea 
+                        name='message' 
+                        rows='10' 
+                        placeholder='Message'
+                        onChange={handleChange}>    
+                    </textarea>
+                    <div>
                         <button type='submit' class='submit' value='submit-message'>Send</button>
-                    </form>
-                </div>  
-            </FormContainer>
+                        <button onClick={closeEmail} >Cancel</button> 
+                    </div>
+                </form>
+            </div>  
         </Banner>
     )
 }
@@ -36,54 +54,45 @@ const Contact = ({handleClose}) => {
 export default Contact;
 
 const Banner = styled.section`
-    width: 100vw;
-    height: 100vh;
-    background: #000000b4;
-    position: fixed;
-    left: 0;  
-    top: 0; 
-    z-index: 20;
-    margin: auto;      
-    text-align: left;
-    h3{
-        text-align: center;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-    }    
-}`
-
-const FormContainer = styled.div`
     width: 40vw;
-    background: #857c6a;
+    margin: auto;
+    background: #f5f5f5;
+    position: fixed;
+    top: 20%;
+    font-size: 1rem;
+    z-index: 20;    
+    box-shadow: 0px 4px 25px black;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    left: 25%;
-    form{
-        margin: 0 auto;
-        margin-top: -50px;
-        padding: 0;
+    h3{
+        text-align: center;
+        color: #000;
+    }        
+    input{
+        margin: 10px auto;
         width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 1.25rem;
-        input{
-            margin: 10px auto;
-            color: gray;
-            width: 100%;
-            height: 30px;
-            border: none;
-            background-color: #f7f1e4;
-        }
-        textarea{
-            margin: 10px 0;
-            height: 70px;
-            border: none;
-            background-color: #f7f1e4;
-            font-family: sans-serif;
-        }
-        button{margin: 5px auto} 
+        height: 30px;
+        border: none;
+        background-color: #fff;
     }
-`;
+    textarea{
+        margin: 10px 0;
+        width: 90%;
+        border: none;
+        background-color: #fff;
+        font-family: sans-serif;
+    }
+    button{
+        margin: 10px 5px;
+        border: none;
+        padding: 10px 20px;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+        :hover{
+            background: #fff;
+            color: #000
+        }
+    } 
+
+`
