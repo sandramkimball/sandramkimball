@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import gmailAPI from 'react-gmail'
 import styled from 'styled-components';
 
 const Contact = ({status, setStatus}) => {
