@@ -5,7 +5,7 @@ import './App.css';
 
 
 //components
-import Banner_Home from './components/Banner_Home';
+import Banner_0 from './components/Banner_0';
 import Banner_1 from './components/Banner_1';
 import Banner_2 from './components/Banner_2';
 import Banner_3 from './components/Banner_3';
@@ -26,11 +26,10 @@ function App() {
           </ul>
         </nav>
         <div id = 'body'>
-          <Banner_Home/>
+          <Banner_0/>
           <Banner_1 className='banner-wrapper'/>
           <Banner_2 />
           <Banner_3/>
-          <Popup/>
         </div>
       </Router>         
       </header>

@@ -1,43 +1,75 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab, faNode, faCss3Alt, faHtml5, faReact, faJs, faPython } from '@fortawesome/free-brands-svg-icons'
-import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
-import {useTransition, animated} from 'react-spring'
+import { fab, faNode, faCss3Alt,  faSass, faHtml5, faReact, faJs, faPython } from '@fortawesome/free-brands-svg-icons'
+import { faDatabase, faFile,faServer } from '@fortawesome/free-solid-svg-icons';
 
-const skills = [
-    {f_icon: faHtml5, name:'HTML'},
-    {f_icon: faCss3Alt, name:'CSS'},
-    {f_icon: faJs, name:'JS'},
-    {f_icon: faReact, name:'REACTJS'},
-    {f_icon: faNode, name:'NODE'},
-    {f_icon: faDatabase, name:'SQL'},
-    {f_icon: faServer, name:'GRAPHQL'},
+
+const funds = [
+    {f_icon: faHtml5, name:'HTML5'},
+    {f_icon: faCss3Alt, name:'CSS3'},
+    {f_icon: faJs, name:'JAVASCRIPT'},
     {f_icon: faPython, name:'PYTHON'},
 ]
+const FE = [
+    {f_icon: faReact, name:'REACTJS'},
+    {f_icon: faReact, name:'REACT HOOKS'},
+    {f_icon: faReact, name:'REDUX'},
+    {f_icon: faSass, name:'SASS'},
+    {f_icon: faFile, name:'AXIOS'},
+    {f_icon: faFile, name:'JEST'},
+    {f_icon: faReact, name:'REACT-TESTING-LIBRARY'},
+]
+
+const BE = [
+    {f_icon: faNode, name:'NODEJS'},
+    {f_icon: faNode, name:'EXPRESS'},
+    {f_icon: faDatabase, name:'SQL'},
+    {f_icon: faServer, name:'GRAPHQL'},
+    {f_icon: faServer, name:'DJANGO'},
+    {f_icon: faFile, name:'KNEX'},
+    {f_icon: faFile, name:'JEST'},
+    {f_icon: faFile, name:'SUPER TEST'},
+]
+
 
 const Skills  = () => {
-    const [items, set] = useState(skills)
-
-    const transitions = useTransition(items, item => item.name, {
-        immediate: false,
-        from: { transform: 'translate3d(0,-40px,0)', opacity: 0 },
-        enter: {transform: 'translate3d(0,0px,0)', opacity: 1},
-        
-    })
-
-// onFrame: frame => {( {enter: {transform: 'translate3d(0,0px,0)', opacity: 1} } )}
 
     return(
         <SkillList className='tech-stack'>
-            <ul>
-            {transitions.map( ({ item, key, props }) => (
-                <animated.li key={key} style={props}> 
-                    <FontAwesomeIcon icon={item.f_icon}/>
-                    <p>{item.name}</p>
-                </animated.li>
-            ))}
-            </ul>
+            <div>
+                <h6>FUNDAMENTALS</h6>
+                <ul>
+                {funds.map( item => (
+                    <li>
+                        <FontAwesomeIcon icon={item.f_icon}/>
+                        <p>{item.name}</p>
+                    </li>
+                ))}
+                </ul>
+            </div>
+            <div>
+                <h6>FRONT-END</h6>
+                <ul>
+                {FE.map( item => (
+                    <li>
+                        <FontAwesomeIcon icon={item.f_icon}/>
+                        <p>{item.name}</p>
+                    </li>
+                ))}
+                </ul>
+            </div>
+            <div>
+                <h6>BACK-END</h6>
+                <ul>
+                {BE.map( item => (
+                    <li>
+                        <FontAwesomeIcon icon={item.f_icon}/>
+                        <p>{item.name}</p>
+                    </li>
+                ))}
+                </ul>
+            </div> 
         </SkillList>
 )}
 
@@ -45,26 +77,27 @@ export default Skills;
 
 const SkillList = styled.div`
     margin: 5px auto;
-    padding: 0 0 11px 0;
     width: 90%;
     display: flex;    
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    h6{font-size: 1rem; margin: 5vh 0 2vh 0 }
     ul{
-        margin: 0;
+        margin: auto;
         padding:0;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         li{ 
-            width: 20%;
+            width: 10%;
             list-style: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-            p{padding: 0; margin: 0; font-size: 1.75rem}
-            svg{font-size: 6rem; padding-bottom: 5px}
+            p{padding: 0; margin: 0; font-size: 1.25rem}
+            svg{font-size: 3rem; padding-bottom: 5px}
             background-color: #101010eb;
             border-radius: 4px;
             padding: 20px 0;

@@ -20,6 +20,14 @@ export default Card
 const Proj = Styled.div`
     margin: 15vh 2vw 0 2vw;
     transition: opacity 300ms linear;
+    background: #f5f5f5;
+    box-shadow: 0px 3px 5px gray;
+    height: 60%;
+    cursor: pointer;
+    :hover{
+        transform: scale(1.025);
+        a{color: gray;}
+        }
     img{
         height: 30vh;
         width: 45vh;
@@ -30,6 +38,7 @@ const Proj = Styled.div`
         margin: auto;
         font-size: 1rem;
         text-align: left;
+        padding: 5px;
     }
     a{ 
         font-family: 'Roboto', sans-serif;        
@@ -39,7 +48,6 @@ const Proj = Styled.div`
         justify-content: center;
         margin: auto;
         color: black;
-        :hover{color: gray}
     }
     .stack{
         color: gray;
