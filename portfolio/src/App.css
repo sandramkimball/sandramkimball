@@ -93,13 +93,17 @@
   /* banner 2 */
   .skills-container h6{font-size: 1.25rem !important}
   .skills-container p{font-size:1rem !important}
-  .tech-stack ul li{
-    width: 15% !important;
-    padding: 15px 0 !important; 
+  .tech-stack div{
+    width: 30% !important;
   }
-  
+  .tech-stack ul{
+    width: 90% !important;
+  }
   .tech-stack ul li p{
     font-size: 1.05rem !important
+  }
+   .tech-stack ul svg{
+    font-size: 2rem !important
   }
 
   /* banner 3 */
@@ -109,7 +113,8 @@
   .banner-3 .pj-container{
     margin: 0 auto;
     display: flex;
-    flex-direction: column !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
     height: 100%; 
     width: 100vw;
     transform: none !important;
@@ -122,13 +127,15 @@
     display: none;
   }
   .proj-card{
-    margin: 5vh auto !important;
-    width: 90%;
-    padding: 20px;
+    margin: 5vh 0 !important;
+    width: 48%;
+    height: 40vh;
+    padding: 2px;
     box-shadow: 0px 2px 3px gray;
     background: #e7e7e7; 
   }
-  .proj-card p {display: none}
+  .proj-card .top {width: 100% !important}
+  .proj-card img {width: 100% !important; height: 20vh !important}
   .proj-card h5{display: none}
 
 }
@@ -162,15 +169,14 @@
   .banner-2 {
     height: 100% !important;
   }
+  .tech-stack{
+    flex-direction: column !important;
+  }
+  .tech-stack div {
+    width: 90vw !important
+  }
   .tech-stack ul svg{
     font-size: 2.5rem !important
-  }
-  .tech-stack ul p{
-    font-size: 1rem !important
-  }
-  .tech-stack ul li{
-    width: 30% !important;
-    padding: 15px 0 !important; 
   }
 
   /* banner 3 */
@@ -182,6 +188,7 @@
   .proj-card{
     margin: 0 auto;
     width: 100% !important;
+    height: 30vh !important;
     padding: 20px 0;
   }
   .proj-card a img{
@@ -191,7 +198,7 @@
   .proj-card svg{
     display: none;
   }
-
+  .proj-card p {display: none}
 }
 
 

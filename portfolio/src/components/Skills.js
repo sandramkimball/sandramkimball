@@ -13,22 +13,19 @@ const funds = [
     {f_icon: faFileCode, name:'JEST'},
 ]
 const FE = [
-    {f_icon: faReact, name:'REACTJS'},
-    {f_icon: faReact, name:'REACT HOOKS'},
+    {f_icon: faReact, name:'REACT'},
     {f_icon: faReact, name:'REDUX'},
     {f_icon: faSass, name:'SASS'},
     {f_icon: faFileCode, name:'BOOTSTRAP'},
-    {f_icon: faFileCode, name:'JEST'},
-    {f_icon: faReact, name:'REACT-TESTING-LIBRARY'},
+    {f_icon: faReact, name:'REACT-TESTING'},
 ]
 const BE = [
-    {f_icon: faNode, name:'NODEJS'},
+    {f_icon: faNode, name:'NODE'},
     {f_icon: faNode, name:'EXPRESS'},
-    {f_icon: faDatabase, name:'SQL'},
+    {f_icon: faDatabase, name:'SQL3'},
     {f_icon: faFileCode, name:'DJANGO'},
     {f_icon: faServer, name:'GRAPHQL'},
     {f_icon: faFileCode, name:'KNEX'},
-    {f_icon: faFileCode, name:'SUPER TEST'},
 ]
 
 
@@ -79,7 +76,7 @@ const SkillList = styled.div`
     width: 90%;
     display: flex;    
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     h6{
         font-size: 1rem; 
@@ -89,32 +86,27 @@ const SkillList = styled.div`
         margin: auto;
         padding:0;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        li{ 
-            width: 10%;
+        width: 30vw;
+        li{  
+            width: 95%;
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             background-color: #101010eb;
+            display: flex;
+            align-items: center;
             border-radius: 4px;
-            padding: 30px 0;
-            margin: 4px;
+            margin: 4px auto;
+            padding: 10px 0 10px 20px;
             p{
-                padding: 0; 
+                padding: 0 0 0 10px; 
                 margin: 0;
                 font-size: 1.25rem
             }
             svg{
                 font-size: 3rem; 
                 padding-bottom: 5px
-            }
-            img{
-                height: 3rem;
-                padding-bottom: 5px;
-                color: black
             }
         }    
     }
