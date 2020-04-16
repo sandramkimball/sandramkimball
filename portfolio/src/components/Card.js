@@ -18,13 +18,13 @@ const Card = (props) => {
                 {props.obj.f_url !== null && (
                     <a href={props.obj.f_url} target="_blank">
                         <FontAwesomeIcon icon={faGithub} />
-                        <h7>FE</h7>
+                        <h5>FE</h5>
                     </a>
                 )}
                 
                 {props.obj.b_url !== null && (<a href={props.obj.b_url} target="_blank">
                     <FontAwesomeIcon icon={faGithub} />
-                    <h7>BE</h7>
+                    <h5>BE</h5>
                 </a>)}
             </div>
         </Proj>
@@ -43,7 +43,7 @@ const Proj = Styled.div`
     cursor: pointer;
     :hover{
         transform: scale(1.025);
-        h2, p, svg, h7{color: gray}
+        h2, p, svg, h5{color: gray}
     }
     .top{
         .stack{
@@ -78,7 +78,7 @@ const Proj = Styled.div`
         justify-content: center;
         position: absolute;
         bottom: 0
-        h7{font-size: 1rem; color: gray}
+        h5{font-size: 1rem; color: gray}
         svg{
             font-size: 1.5rem;
             color: gray;
@@ -94,7 +94,7 @@ const Proj = Styled.div`
             margin: 10px 5px;
         }
         a:hover{
-            svg, h7{background: none; color: red}
+            svg, h5{background: none; color: red}
             
     }
 `;

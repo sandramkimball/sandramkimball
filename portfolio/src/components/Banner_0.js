@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import {useSpring, animated} from 'react-spring';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { fab, faGithub, faLinkedin, } from '@fortawesome/free-brands-svg-icons';
+import { faFileAlt, } from '@fortawesome/free-solid-svg-icons';
+import my_resume from '../images/Resume.pdf'
 
 const Banner_0 = () => {
     const props = useSpring({
@@ -26,6 +28,11 @@ const Banner_0 = () => {
                     <a href="https://github.com/sandramkimball?tab=repositories" target="_blank">
                         <FontAwesomeIcon icon={faGithub} />
                         <p>Github</p>
+                    </a>
+                    
+                    <a href={my_resume} target="_blank">
+                        <FontAwesomeIcon icon={faFileAlt} />
+                        <p>Resume</p>
                     </a>
                 </div>
             </animated.div> 

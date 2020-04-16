@@ -23,7 +23,7 @@ function App() {
           <ul>
             <a href="#1"><li>ABOUT</li></a>
             <a href="#2"><li>SKILLS</li></a>
-            <a href={my_resume} target='_blank'><li>RESUME</li></a>
+            <a href={my_resume} target='_blank' className='resume-btn'><li>RESUME</li></a>
             <a href="#3"><li>PROJECTS</li></a>
           </ul>
         </nav>
