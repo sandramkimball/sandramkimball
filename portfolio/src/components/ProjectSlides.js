@@ -16,8 +16,8 @@ const projects = [
         title: 'FOODIE FUN',
         text: 'Marketing site for a food blogger app. 1 week sprint working with a frontend and UX developer',
         stack: 'Html | Css',
-        b_url: '',
-        f_url: ''
+        f_url: null,
+        b_url: null,
     },
     {
         id: 2, 
@@ -25,8 +25,10 @@ const projects = [
         href: 'https://icnst-development.netlify.com/',
         img: icnst,
         title: 'CHILD NUTRITION TRACKER',
-        text: 'Collaborated with a senior React developer for an application to help doctors in foreign nations log and chart health information for patients. 1 week sprint. Worked with a FE developer and UX designer',
-        stack: 'Redux | Html | Css'
+        text: 'Collaborated with a senior React developer on a logging system for doctors in foreign nations to track patient health. One week sprint with a team of five.',
+        stack: 'Redux | Html | Css',
+        f_url: 'https://github.com/ICNST/FE',
+        b_url: null,
     },
     {
         id: 3,
@@ -34,8 +36,8 @@ const projects = [
         href: 'https://sauti.now.sh/',
         img: sautidb3,
         title: 'SAUTI TRADERS',
-        text: 'Build-on project for a non-profit consensus organisation for informal cross-border traders in Africa. 2 month sprint with a team of 5. Worked on data parser, csv downloader, filter form and functionality.',
-        stack: 'ReactJs | Nivo | CsvDownloader | GraphQL | Html | Css',
+        text: 'A build-on for a non-profit collecting data on traders in Africa. Two month sprint with a team of five. Updated the data parser, added csv downloader, and additional filters.',
+        stack: 'ReactJs | Nivo | CsvDownloader | GraphQL ',
         f_url: 'https://github.com/dylanmestyanek/sauti-databank-fe',
         b_url: 'https://github.com/dylanmestyanek/sauti-databank-be'
     },
@@ -45,7 +47,7 @@ const projects = [
         href: 'https://stylistfind.now.sh/',
         img: stylist,
         title: 'STYLIST FIND',
-        text: 'Professional platform for hair stylists and clients to connect through reviews, portfolios and search options. Personal side project.',
+        text: 'Platform for hair stylists and clients to connect through reviews, portfolios and search options. Personal side project.',
         stack: 'ReactJs | NodeJs | JsonWebToken | Html | Css',
         f_url: 'https://github.com/sandramkimball/stylistfind',
         b_url: 'https://github.com/sandramkimball/StylistFind---BE',
@@ -58,7 +60,8 @@ const projects = [
         title: 'TO DO LIST',
         text: 'A simple to do list where you can add and delete items using Redux. 1 day sprint, solo.',
         stack: 'Redux | Html | Css',
-        f_url: 'https://github.com/sandramkimball/reducer-todo'
+        f_url: 'https://github.com/sandramkimball/reducer-todo',
+        b_url: null,
     },
     {
         id: 6,
@@ -68,7 +71,8 @@ const projects = [
         title: 'COMING SOON',
         text: 'Online Python/Django adventure game. Personal side project.',
         stack: 'Python3 | Django | Html | Css',
-        f_url: 'https://github.com/sandramkimball/marsexplorer'
+        f_url: 'https://github.com/sandramkimball/marsexplorer',
+        b_url: 'https://github.com/CS26-BW1-T28/CS-Build-Week-1'
     },
 ]
 
