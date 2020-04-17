@@ -30,7 +30,7 @@ const Projects = () => {
     return (
         <ProjectsContainer id='3' className={`banner-3`}> 
             <FontAwesomeIcon icon={faChevronLeft} onClick={handleBack} className='left'/>
-            <div className='pj-container' 
+            <div className='pj-container' data-testid='pj-container'
                 style={{'transform': `translateX(-${project.index*(100/projects.length)+5}%)`}}
             >
                 {projects.map(obj=> <Card key={obj.id} obj={obj}/> )}

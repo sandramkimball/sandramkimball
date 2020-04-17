@@ -11,8 +11,6 @@ import Banner_2 from './components/Banner_2';
 import Banner_3 from './components/Banner_3';
 import my_resume from './images/Resume.pdf'
 
-
-
 function App() {
 
   return (
@@ -23,7 +21,7 @@ function App() {
           <ul>
             <a href="#1"><li>ABOUT</li></a>
             <a href="#2"><li>SKILLS</li></a>
-            <a href={my_resume} target='_blank' className='resume-btn'><li>RESUME</li></a>
+            <a href={my_resume} target='_blank' data-testid='resume-btn'><li>RESUME</li></a>
             <a href="#3"><li>PROJECTS</li></a>
           </ul>
         </nav>

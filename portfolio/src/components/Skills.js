@@ -32,7 +32,7 @@ const BE = [
 const Skills  = () => {
 
     return(
-        <SkillList className='tech-stack'>
+        <SkillList className='tech-stack' data-testid='tech-stack'>
             <div>
                 <h6>FUNDAMENTALS</h6>
                 <ul>
