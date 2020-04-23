@@ -21,11 +21,11 @@ const Banner_0 = () => {
                 <h3>Full Stack Web Developer</h3>
                 
                 <div className = 'connect-links'>
-                    <a href="https://www.linkedin.com/in/sandy-kimball-9b7461192/" target="_blank">
+                    <a href="https://www.linkedin.com/in/sandy-kimball/" target="_blank">
                         <FontAwesomeIcon icon={faLinkedin} />
                         <p>LinkedIn</p>
                     </a>
-                    <a href="https://github.com/sandramkimball?tab=repositories" target="_blank">
+                    <a href="https://github.com/sandramkimball" target="_blank">
                         <FontAwesomeIcon icon={faGithub} />
                         <p>Github</p>
                     </a>

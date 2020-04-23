@@ -6,6 +6,7 @@ import sautidb3 from '../images/sautidb3.png';
 import stylist from '../images/stylist-find.png';
 import mars from '../images/mars-explor.png';
 import toDo from '../images/reducer-todo.png'
+import ramen from '../images/ramen.png'
 
 const projects = [
     {
@@ -66,6 +67,17 @@ const projects = [
     {
         id: 6,
         index: 5,
+        href: 'https://corner-ramen.web.app/',
+        img: ramen,
+        title: 'RAMEN SHOP',
+        text: 'Two week sprint and personal project to learn Angular and Firebase.',
+        stack: 'Angular | Typescript | Html | Css',
+        f_url: 'https://github.com/sandramkimball/corner-ramen',
+        b_url: null,
+    },
+    {
+        id: 7,
+        index: 6,
         href: null,
         img: mars,
         title: 'COMING SOON',

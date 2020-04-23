@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab, faNode, faCss3Alt,  faSass, faHtml5, faReact, faJs, faPython } from '@fortawesome/free-brands-svg-icons'
+import { fab, faNode, faAngular, faCss3Alt,  faSass, faHtml5, faReact, faJs, faPython } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faFileCode, faCodeBranch, faServer } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -18,6 +18,7 @@ const FE = [
     {f_icon: faSass, name:'SASS'},
     {f_icon: faFileCode, name:'BOOTSTRAP'},
     {f_icon: faReact, name:'REACT-TESTING'},
+    {f_icon: faAngular, name:'ANGULAR'},
 ]
 const BE = [
     {f_icon: faNode, name:'NODE'},
