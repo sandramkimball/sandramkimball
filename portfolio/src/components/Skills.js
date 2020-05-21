@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab, faNode, faAngular, faCss3Alt,  faSass, faHtml5, faReact, faJs, faPython } from '@fortawesome/free-brands-svg-icons'
-import { faDatabase, faFileCode, faCodeBranch, faServer } from '@fortawesome/free-solid-svg-icons';
+import { fab, faNode, faAngular, faCss3Alt, faEnvira, faSass, faHtml5, faReact, faJs, faPython } from '@fortawesome/free-brands-svg-icons'
+import { faDatabase, faFileCode, faServer } from '@fortawesome/free-solid-svg-icons';
 
 
 const funds = [
@@ -13,7 +13,7 @@ const funds = [
     {f_icon: faFileCode, name:'JEST'},
 ]
 const FE = [
-    {f_icon: faReact, name:'REACT'},
+    {f_icon: faReact, name:'REACT JS'},
     {f_icon: faReact, name:'REDUX'},
     {f_icon: faSass, name:'SASS'},
     {f_icon: faFileCode, name:'BOOTSTRAP'},
@@ -21,12 +21,12 @@ const FE = [
     {f_icon: faAngular, name:'ANGULAR'},
 ]
 const BE = [
-    {f_icon: faNode, name:'NODE'},
-    {f_icon: faNode, name:'EXPRESS'},
-    {f_icon: faDatabase, name:'SQL3'},
+    {f_icon: faNode, name:'NODE JS'},
+    {f_icon: faNode, name:'EXPRESS JS'},
+    {f_icon: faDatabase, name:'SQL3 & KNEX'},
     {f_icon: faFileCode, name:'DJANGO'},
     {f_icon: faServer, name:'GRAPHQL'},
-    {f_icon: faFileCode, name:'KNEX'},
+    {f_icon: faEnvira, name:'MONGODB'},
 ]
 
 

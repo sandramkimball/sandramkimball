@@ -47,25 +47,31 @@
 }
 
 
-/* --- MEDIA --- */
+/* --- MEDIA RESPONSIVEBESS --- */
 
 @media only screen and (max-width: 1024px){
   /* banner 1 */
   .pic-title{width: 40% !important;}
   .skills-container{width: 40% !important}
-  .skills-container h6{font-size: 2rem !important}
-  .skills-container p{font-size:1.5rem !important}
-  .skills-container svg{font-size:1.5rem !important}
+  .skills-container h6{font-size: 1.75rem !important}
+  .skills-container p{font-size:1.25rem !important}
+  .skills-container svg{font-size:1.25rem !important}
 
 
-  /* banner 3 */
+  /* banner 3 */  
+  .proj-card{
+    margin: 0 auto;
+    width: 65vw !important;
+    height: 70vh !important;
+  }
+
   .pj-container img{
-    max-width: 60vw;
+    max-width: 62vw;
     max-height: 50vh;
     object-fit: contain;
   }
-  .pj-container h2{font-size: 3rem;}
-  .pj-container p{font-size: 2rem; max-width: 60vw !important;}
+  .pj-container h2{font-size: 1.25rem;}
+  .pj-container p{font-size: 1.25rem; max-width: 95% !important;}
 
 }
 
@@ -90,7 +96,11 @@
   .home-banner h3{font-size: 2rem}
   
 
-  /* banner 2 */
+  /* banner 2 & skills */
+  .banner-2 {
+    min-height: 100vh !important;
+    height: 100% !important;
+  }
   .skills-container h6{font-size: 1.25rem !important}
   .skills-container p{font-size:1rem !important}
   .tech-stack div{
@@ -102,11 +112,11 @@
   .tech-stack ul li p{
     font-size: 1.05rem !important
   }
-   .tech-stack ul svg{
+  .tech-stack ul svg{
     font-size: 2rem !important
   }
 
-  /* banner 3 */
+  /* banner 3 - projects */
   .banner-3{
     background: #fff !important
   }
@@ -120,16 +130,16 @@
     transform: none !important;
   }
   .banner-3 h2{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 0
   }
-  .banner-3 SVG{
+  .banner-3 SVG, .stack{
     display: none;
   }
   .proj-card{
     margin: 5vh 0 !important;
-    width: 48%;
-    height: 40vh;
+    width: 48% !important; 
+    height: 45vh !important;
     padding: 2px;
     box-shadow: 0px 2px 3px gray;
     background: #e7e7e7; 
@@ -140,14 +150,38 @@
 
 }
 
+@media only screen and (max-width: 651px){  
+  /* home title */
+  .home-banner h1{font-size: 3.25rem !important}
+  .home-banner h3{font-size: 1.25rem !important}
+  .home-banner{height: 100%}
+
+  /* banner 1 - about */
+  .banner-1 div{
+    width: 48% !important;
+  }
+
+  /* banner 2 & skills */
+  .tech-stack{
+    flex-direction: column !important;
+  }
+  .tech-stack div {
+    margin: 0 auto;
+    width: 80vw !important
+  }
+  .tech-stack ul svg{
+    font-size: 2.25rem !important
+  }
+}
+
 /* CELL PHONES */
 @media only screen and (max-width: 420px){
-  /*home title */
+  /* home title */
   .home-banner h1{font-size: 3.5rem !important}
   .home-banner h3{font-size: 1.5rem !important}
   
   
-  /* banner 1 */
+  /* banner 1 - about */
   .banner-1{
     flex-direction: column;
   }
@@ -162,21 +196,6 @@
   .skills-container{
     width: 90% !important;
     margin: auto;
-  }
-
-
-  /* banner 2 + skills */
-  .banner-2 {
-    height: 100% !important;
-  }
-  .tech-stack{
-    flex-direction: column !important;
-  }
-  .tech-stack div {
-    width: 90vw !important
-  }
-  .tech-stack ul svg{
-    font-size: 2.5rem !important
   }
 
   /* banner 3 */
