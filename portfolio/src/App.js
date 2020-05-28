@@ -9,6 +9,7 @@ import Banner_0 from './components/Banner_0';
 import Banner_1 from './components/Banner_1';
 import Banner_2 from './components/Banner_2';
 import Banner_3 from './components/Banner_3';
+import ProjectCarousel from './components/Carousel';
 import my_resume from './images/Resume.pdf'
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
           <Banner_0/>
           <Banner_1 className='banner-wrapper'/>
           <Banner_2 />
-          <Banner_3/>
+          <ProjectCarousel/>
         </div>
       </Router>         
       </header>
