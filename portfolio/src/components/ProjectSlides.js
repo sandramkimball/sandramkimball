@@ -1,12 +1,12 @@
 
 //images
-import homepage from '../images/tinyHomepage.png';
+import homepage from '../images/tinyHomepage2.png';
 import icnst from '../images/icnst.jpg';
 import sautidb3 from '../images/sautidb3.png';
 import stylist from '../images/stylist-find.png';
 import mars from '../images/mars-explor.png';
-import toDo from '../images/reducer-todo.png'
-import ramen from '../images/ramen.png'
+import toDo from '../images/reducer-todo1.jpg'
+import ramen from '../images/ramen2.png'
 
 const projects = [
     {

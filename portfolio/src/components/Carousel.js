@@ -6,9 +6,8 @@ const ProjectCarousel = () => {
 
     const styles = {
         width: '50vw',
-        
         color: 'black', 
-        margin: '3vh auto',
+        margin: '15% auto',
         'box-shadow': '0 4px 8px gray',
         'font-size': '1rem',
         color: 'black',
