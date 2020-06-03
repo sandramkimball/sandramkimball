@@ -150,7 +150,48 @@
 
 }
 
-@media only screen and (max-width: 651px){  
+.carousel-caption {
+  position: initial;
+  background: #e7e7e7;
+  margin: auto;
+  color: #000;
+  text-decoration: none;
+  padding: 2px 5px;
+  height: 175px;
+}
+
+.carousel-caption h2 {
+  font-size: 1.2rem
+}
+
+@media only screen and (max-width: 1050px){
+  .carousel {
+    width: 60vw !important;
+  }
+  .carousel-caption{
+    height: 150px;
+  }
+  
+}
+@media only screen and (max-width: 860px){
+  .carousel {
+    width: 75vw !important;
+  }
+  .carousel-caption{
+    height: 125px;
+  }
+  .carousel-caption h2{
+    font-size: 1rem !important;
+  }
+  
+  .carousel-caption p {
+    font-size: .8rem !important;
+    margin: 0;
+  }
+}
+
+
+@media only screen and (max-width: 760px){  
   /* home title */
   .home-banner h1{font-size: 3.25rem !important}
   .home-banner h3{font-size: 1.25rem !important}
@@ -172,6 +213,22 @@
   .tech-stack ul svg{
     font-size: 2.25rem !important
   }
+
+  /* Carousel */
+  .carousel {
+    width: 90vw !important;
+  }
+  .carousel-caption{
+    height: 100% !important;
+  }
+  .carousel-caption h2{
+    font-size: 1.5rem !important;
+    margin: 15px 0 30px 0 ;
+  }
+  
+  .carousel-caption p {
+    display: none !important;
+  }
 }
 
 /* CELL PHONES */
@@ -185,6 +242,9 @@
   .banner-1{
     flex-direction: column;
   }
+  .banner-1 div{
+    width: 95% !important;
+  }
   .pic-title{
     width: 90% !important; 
     margin: auto;
@@ -193,10 +253,7 @@
     height: 30vh !important;
     width: 50vw !important;
   }
-  .skills-container{
-    width: 90% !important;
-    margin: auto;
-  }
+  
 
   /* banner 3 */
   .banner-3 .pj-container{

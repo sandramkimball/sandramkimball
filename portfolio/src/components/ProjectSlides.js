@@ -1,12 +1,12 @@
 
 //images
-import homepage from '../images/tinyHomepage.png';
+import homepage from '../images/tinyHomepage2.png';
 import icnst from '../images/icnst.jpg';
 import sautidb3 from '../images/sautidb3.png';
 import stylist from '../images/stylist-find.png';
 import mars from '../images/mars-explor.png';
-import toDo from '../images/reducer-todo.png'
-import ramen from '../images/ramen.png'
+import toDo from '../images/reducer-todo1.jpg'
+import calculator from '../images/budget-calc.png'
 
 const projects = [
     {
@@ -67,12 +67,12 @@ const projects = [
     {
         id: 6,
         index: 5,
-        href: 'https://corner-ramen.web.app/',
-        img: ramen,
-        title: 'RAMEN SHOP',
-        text: 'Two week sprint and personal project to learn Angular and Firebase.',
-        stack: 'Angular | Typescript | Html | Css',
-        f_url: 'https://github.com/sandramkimball/corner-ramen',
+        href: 'https://budget-calculator-ten.now.sh/',
+        img: calculator,
+        title: 'BUDGET CALCULATOR',
+        text: 'Week long side project. It calculates logged income and expenses to return a total budget.',
+        stack: 'Angular | Typescript | Html | Scss',
+        f_url: 'https://github.com/sandramkimball/budget-calculator/tree/master/budget-app',
         b_url: null,
     },
     {
