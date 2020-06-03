@@ -7,15 +7,14 @@ const ProjectCarousel = () => {
     const styles = {
         width: '50vw',
         color: 'black', 
-        margin: '15% auto',
+        margin: '10% auto',
         'box-shadow': '0 4px 8px gray',
         'font-size': '1rem',
-        color: 'black',
         'text-decoration': 'none'
     }
 
     return (
-        <section style={{height: '90vh'}}>
+        <section style={{height: '60vh'}}>
         <Carousel style={styles}>
             <Carousel.Item>
                 <img
