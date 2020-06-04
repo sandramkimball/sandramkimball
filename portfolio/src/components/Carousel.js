@@ -1,22 +1,28 @@
 import React from 'react';
 import projects from './ProjectSlides'
 import Carousel from 'react-bootstrap/Carousel'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fab, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 const ProjectCarousel = () => {
 
     const styles = {
-        width: '50vw',
+        width: '60vw',
         color: 'black', 
         margin: '10% auto',
         'box-shadow': '0 4px 8px gray',
         'font-size': '1rem',
-        'text-decoration': 'none'
-    }
+        'text-decoration': 'none',
+        'list-style': 'none',
+    };
+
+    const rightIcon = <FontAwesomeIcon icon={faChevronRight} />
+    const leftIcon =  <FontAwesomeIcon icon={faChevronLeft} />
 
     return (
         <section style={{height: '60vh'}}>
-        <Carousel style={styles}>
-            <Carousel.Item>
+        <Carousel style={styles} indicators={false} nextIcon ={rightIcon} prevIcon={leftIcon}>
+           <Carousel.Item>
                 <img
                     className="d-block w-100"
                     src={projects[0].img}
@@ -114,7 +120,7 @@ const ProjectCarousel = () => {
                     </a>
                 </Carousel.Caption>
             </Carousel.Item>
-      </Carousel>
+        </Carousel>
       </section>
     )
 }
