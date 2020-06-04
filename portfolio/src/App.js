@@ -8,7 +8,6 @@ import './App.css';
 import Banner_0 from './components/Banner_0';
 import Banner_1 from './components/Banner_1';
 import Banner_2 from './components/Banner_2';
-import Banner_3 from './components/Banner_3';
 import ProjectCarousel from './components/Carousel';
 import my_resume from './images/Resume.pdf'
 
