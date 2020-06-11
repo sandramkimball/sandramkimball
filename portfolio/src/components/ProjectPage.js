@@ -8,9 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const ProjectsPage = () => {     
     const [bigProj, setBigProj] = useState(projects[2])
 
-    const handleClick = (obj) => {
+    function handleClick(obj) {
         setBigProj(obj)
-        console.log('boop')
     }
     
     return (
@@ -41,12 +40,13 @@ const ProjectsPage = () => {
             </section>
 
             <section className='pj-container' data-testid='pj-container' >
-                {projects.map(obj=> 
-                    <Card 
-                        key={obj.id} 
-                        obj={obj} 
-                        handleClick={ handleClick } 
-                    /> 
+                {projects.map( obj => 
+                    <span onClick={ () => handleClick(obj)} >
+                        <Card 
+                            key={obj.id} 
+                            obj={obj} 
+                        /> 
+                    </span>
                 )}
             </section>
         </ProjectsContainer>
@@ -57,38 +57,40 @@ export default ProjectsPage;
 
 const ProjectsContainer = styled.section`
     height: 100%;
-    margin: auto;
+    margin-top: 5vh;
     padding: 2vh 0;
     background: #e7e7e7;  
-    
     a{ 
         font-family: 'Roboto', sans-serif;        
-        transform: none;
-        text-decoration: none;
+        color: #000;
         align-items: center;
         justify-content: center;
         margin: auto;
-        color: black;
-        :hover{color: gray}
+        :hover{color: #007bff}
     }    
+    span{
+        height: 100%;
+        padding: 10px 0;
+    }
+
     .pj-container{
         margin: auto;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap; 
         height: 100%; 
-        width: 90vw;
-        justify-content: center; 
+        width: 65vw;
+        justify-content: space-between; 
     }
 
     .pj-big{
-        width: 68vw;
+        width: 65vw;
         height: 45vh;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         background: #fff;
-        margin: 2vh auto;
+        margin: 5vh auto;
         padding: 2vh;
         img{
             height: 40vh;
@@ -119,7 +121,7 @@ const ProjectsContainer = styled.section`
                 margin: 0 5px;
             }
             a:hover{
-                svg, h5{background: none; color: red}
+                svg, h5{background: none; color: #007bff}
                 
         }
     }

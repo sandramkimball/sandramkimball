@@ -16,8 +16,7 @@ const Card = (props) => {
 export default Card
 
 const Proj = Styled.div`
-    margin: 2vw;
-    transition: opacity 300ms linear;
+    margin: 2vw 0;
     position: relative;
     background: #f5f5f5;
     box-shadow: 0px 3px 5px gray;
@@ -30,7 +29,7 @@ const Proj = Styled.div`
     };
     :hover{
         transform: scale(1.005);
-        h2, p, svg, h5{color: gray}
+        h2, p, svg, h5{color: #007bff; text-decoration: none}
     }
     .top{
         .stack{
@@ -51,12 +50,10 @@ const Proj = Styled.div`
         }
         a{ 
             font-family: 'Roboto', sans-serif;        
-            transform: none;
-            text-decoration: none;
             align-items: center;
             justify-content: center;
             margin: auto;
-            color: #000;
+            text-decoration: none
         }
     }
 `;

@@ -49,8 +49,34 @@
 
 
 
-
 /* --- MEDIA RESPONSIVEBESS --- */
+@media only screen and (max-width: 1305px){
+  /* Project Page */  
+  .pj-container, .pj-big{
+    width: 70vw !important;
+  }
+}
+
+@media only screen and (max-width: 1185px){
+ /* Project Page */  
+ .pj-container, .pj-big{
+    width: 78vw !important;
+  }
+  .pj-big h2{
+    font-size: 1.5rem !important;
+  }  
+  .pj-big p{
+    font-size: 1rem !important;
+  }
+  .proj-card{
+    margin: 0 auto;
+    width: 35vw !important;
+  }
+  .pj-container .top img{
+    width: 35vw !important;
+  }
+}
+
 @media only screen and (max-width: 1024px){
   /* banner 1 */
   .pic-title{width: 40% !important;}
@@ -58,22 +84,6 @@
   .skills-container h6{font-size: 1.75rem !important}
   .skills-container p{font-size:1.25rem !important}
   .skills-container svg{font-size:1.25rem !important}
-
-
-  /* banner 3 */  
-  .proj-card{
-    margin: 0 auto;
-    width: 65vw !important;
-    height: 70vh !important;
-  }
-
-  .pj-container img{
-    max-width: 62vw;
-    max-height: 50vh;
-    object-fit: contain;
-  }
-  .pj-container h2{font-size: 1.25rem;}
-  .pj-container p{font-size: 1.25rem; max-width: 95% !important;}
 
    /*  Carousel */
    .carousel-banner {
@@ -140,20 +150,7 @@
     font-size: 1.25rem;
     margin-bottom: 0
   }
-  .banner-3 SVG, .stack{
-    display: none;
-  }
-  .proj-card{
-    margin: 5vh 0 !important;
-    width: 48% !important; 
-    height: 45vh !important;
-    padding: 2px;
-    box-shadow: 0px 2px 3px gray;
-    background: #e7e7e7; 
-  }
-  .proj-card .top {width: 100% !important}
-  .proj-card img {width: 100% !important; height: 20vh !important}
-  .proj-card h5{display: none}
+ 
 
   /* Carousel */
   .carousel-banner{
@@ -165,11 +162,31 @@
     width: 70vw !important;
     margin: 0 auto;
   }
-  
   .carousel-caption h2{
     font-size: 1rem !important;
   }
  
+   /* Project Page */  
+   .pj-container, .pj-big{
+    width: 90vw !important;
+  }
+  .pj-big h2{
+    font-size: 1.2rem !important;
+  }  
+  .pj-big p{
+    font-size: 1rem !important;
+  }
+  .proj-card{
+    width: 40vw !important;
+  }
+  /* .proj-card h2{
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } */
+  .pj-container .top img{
+    width: 40vw !important;
+  }
 
 }
 
@@ -213,7 +230,72 @@
  
 }
 
+@media only screen and (max-width: 700px){  
+   /* Project Page */  
+  .pj-big p{
+    font-size: 14px !important;
+  }
+  .proj-card h2{
+    display: none;
+  }
+  .proj-card {
+    width: 20vw !important;
+    height: 15vw !important;
+  }
+  .pj-container .top img{
+    width: 20vw !important;
+    height: 15vw !important;
+    object-fit: cover !important;
+  }
+}
+
 /* CELL PHONES */
+@media only screen and (max-width: 430px){
+
+  /* Projects Page */
+  .pj-big{
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+  .pj-big img{
+    width: 90vw !important;
+    height: 20vh !important;
+  }
+  .pj-big div{
+    width: 95% !important;
+    padding: 5px 0;
+  }
+  .pj-big h2{
+    text-align: center !important;
+  }
+  .pj-container{
+    flex-direction: column !important;
+  }
+  .proj-card{
+    margin: 0 auto;
+    width: 90vw !important;
+    height: 100% !important;
+    padding: 0 auto !important;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+  }
+  .pj-container span{
+    padding: 0 !important;
+  }
+  .proj-card .top img{
+    width: 30vw !important;
+    height: 10vh !important;
+  }
+  .proj-card h2{
+    display: initial;
+    font-size: 1rem !important;
+    padding-left: 10px !important;
+  }
+}
+
 @media only screen and (max-width: 420px){
   /* home title */
   .home-banner h1{font-size: 3.5rem !important}
@@ -237,26 +319,6 @@
   }
   
 
-  /* banner 3 */
-  .banner-3 .pj-container{
-    display: inherit !important;
-    height: 100%;
-    width: 95vw !important;
-  }
-  .proj-card{
-    margin: 0 auto;
-    width: 100% !important;
-    height: 30vh !important;
-    padding: 20px 0;
-  }
-  .proj-card a img{
-    max-width: none;
-    width: 100% !important;
-  }
-  .proj-card svg{
-    display: none;
-  }
-  .proj-card p {display: none}
 }
 
 
