@@ -1,32 +1,14 @@
 import Styled from 'styled-components'
 import React from 'react'
-import { fab, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 const Card = (props) => {
     return (
         <Proj className='proj-card'>
             <div className='top'>
-                <a href={props.obj.href} target="_blank">  
-                    <img src={props.obj.img}/> 
-                    <h2>{props.obj.title}</h2>
+                <img src={props.obj.img}/> 
+                <a href={props.obj.href} target="_blank"><h2>{props.obj.title}</h2></a>
                     {/* <p className='stack'>{props.obj.stack}</p>
                     <p>{props.obj.text}</p> */}
-                </a>
             </div>
-            {/* <div className='git-link'>                
-                {props.obj.f_url !== null && (
-                    <a href={props.obj.f_url} target="_blank">
-                        <FontAwesomeIcon icon={faGithub} />
-                        <h5>FE</h5>
-                    </a>
-                )}
-                
-                {props.obj.b_url !== null && (<a href={props.obj.b_url} target="_blank">
-                    <FontAwesomeIcon icon={faGithub} />
-                    <h5>BE</h5>
-                </a>)}
-            </div> */}
         </Proj>
     )
 }
@@ -41,7 +23,11 @@ const Proj = Styled.div`
     box-shadow: 0px 3px 5px gray;
     height: 100%;
     cursor: pointer;
-    h2{ font-size: 1.25rem };
+    h2{ 
+        font-size: 1.2rem; 
+        margin: auto;
+        padding: 2px 0; 
+    };
     :hover{
         transform: scale(1.005);
         h2, p, svg, h5{color: gray}
@@ -72,30 +58,5 @@ const Proj = Styled.div`
             margin: auto;
             color: #000;
         }
-    }
-    
-    .git-link{
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 0
-        h5{font-size: 1rem; color: gray}
-        svg{
-            font-size: 1.5rem;
-            color: gray;
-            height: 2rem;
-            position: inherit;
-            margin: 0;
-            padding: 0 2px;
-        }
-        a{
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            margin: 10px 5px;
-        }
-        a:hover{
-            svg, h5{background: none; color: red}
-            
     }
 `;

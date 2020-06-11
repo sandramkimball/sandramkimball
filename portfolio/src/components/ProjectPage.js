@@ -2,15 +2,20 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import Card from './Card'
 import projects from './Projects'
-import { fab, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ProjectsPage = () => {     
     const [bigProj, setBigProj] = useState(projects[2])
+
+    const handleClick = (obj) => {
+        setBigProj(obj)
+        console.log('boop')
+    }
     
     return (
         <ProjectsContainer id='3'> 
-            <section class='pj-big'>
+            <section className='pj-big'>
                 <img src={bigProj.img}/> 
                 <a href={bigProj.href} target="_blank">  
                     <div>
@@ -40,7 +45,7 @@ const ProjectsPage = () => {
                     <Card 
                         key={obj.id} 
                         obj={obj} 
-                        // onClick={setBigProj(obj)} 
+                        handleClick={ handleClick } 
                     /> 
                 )}
             </section>

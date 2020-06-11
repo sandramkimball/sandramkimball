@@ -8,23 +8,17 @@ import { fab, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-
 
 const ProjectCarousel = () => {
 
-    const styles = {
-        width: '40vw',
-        color: 'black', 
-        margin: '5% auto',
-        'box-shadow': '0 4px 8px gray',
-        'font-size': '1rem',
-        'text-decoration': 'none',
-        'list-style': 'none',
-    };
-
     const rightIcon = <FontAwesomeIcon icon={faChevronRight} />
     const leftIcon =  <FontAwesomeIcon icon={faChevronLeft} />
 
     return (
-        <CarouselCont>
+        <CarouselContainer className='carousel-banner'>
+            <div className='desc'>
+                <p>Projects are designed with users in mind, utilizing the latest technology to achieve responsiveness, accessibility and security.</p>
+                <Link to='/projects'><h4>View Project Gallery</h4></Link>
+            </div>
             <div> 
-                <Carousel style={styles} indicators={false} nextIcon ={rightIcon} prevIcon={leftIcon}>
+                <Carousel indicators={false} nextIcon ={rightIcon} prevIcon={leftIcon}>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
@@ -111,28 +105,58 @@ const ProjectCarousel = () => {
                     </Carousel.Item>
                 </Carousel>
             </div>
-            <div className='desc'>
-                <p>Projects are designed with users in mind, utilizing the latest technology to achieve responsiveness, accessibility and security.</p>
-                <Link to='/projects'><h3>View Project Gallery</h3></Link>
-            </div>
-
-      </CarouselCont>
+      </CarouselContainer>
     )
 }
 
 export default ProjectCarousel
 
-const CarouselCont = Styled.section`
+const CarouselContainer = Styled.section`
     height: 60vh;
-    width: 90%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-content: center;
     margin: 10vh auto;
+    div{ 
+        width: 40vw; 
+        margin: auto
+    }
+    .carousel{
+        color: #000;
+        box-shadow: 0 4px 8px gray;
+        font-size: 1rem;
+        text-decoration: none;
+        list-style: none
+    }
     .desc{
         margin: auto;
-        width: 60%;
         p {
             font-size: 1.25rem
         }
+    }
+
+    .carousel-caption {
+        position: initial;
+        margin: 2px auto;
+        text-decoration: none;
+        color: gray;
+        background: rgb(235, 233, 233)
+    }
+    .carousel-caption a{
+        color: #000;
+    }      
+    .carousel-caption h2 {
+        font-size: 1.2rem
+    }      
+    .carousel svg{
+        font-size: 50px;
+        color: #000;
+        opacity: 1;
+    }
+    .carousel-control-next, .carousel-control-prev{
+        width: 10%;
+    }
+    .carousel-control-next:hover, .carousel-control-prev:hover{
+        background: rgba(128, 128, 128, 0.418);
     }
 `;

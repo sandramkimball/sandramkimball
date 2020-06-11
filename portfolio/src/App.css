@@ -47,46 +47,10 @@
   color: red;
 }
 
-/* Carousel */
-.carousel-caption {
-  position: initial;
-  margin: auto;
-  text-decoration: none;
-  padding: 5px 20px;
-  height: 40px;
-  color: gray;
-  background: rgb(235, 233, 233)
-}
-.carousel-caption a{
-  color: #000;
-}
-
-.carousel-caption h2 {
-  font-size: 1.2rem
-}
-
-.carousel svg{
-  font-size: 50px;
-  color: #000;
-  opacity: 1;
-}
-.carousel-control-next, .carousel-control-prev{
-  width: 10%;
-}
-.carousel-control-next:hover, .carousel-control-prev:hover{
-  background: rgba(128, 128, 128, 0.418);
-}
-
 
 
 
 /* --- MEDIA RESPONSIVEBESS --- */
-@media only screen and (max-width: 1145px){
-   /*  Carousel */
-   .carousel {
-    width: 60vw !important;
-  }
-}
 @media only screen and (max-width: 1024px){
   /* banner 1 */
   .pic-title{width: 40% !important;}
@@ -111,7 +75,10 @@
   .pj-container h2{font-size: 1.25rem;}
   .pj-container p{font-size: 1.25rem; max-width: 95% !important;}
 
-
+   /*  Carousel */
+   .carousel-banner {
+    margin: 10vh auto !important;
+  }
 }
 
 /* IPAD */
@@ -189,8 +156,14 @@
   .proj-card h5{display: none}
 
   /* Carousel */
-  .carousel {
+  .carousel-banner{
+    flex-direction: column !important;
+    height: 100%  !important;
+    justify-content: center;
+  }
+  .carousel-banner div{
     width: 70vw !important;
+    margin: 0 auto;
   }
   
   .carousel-caption h2{
@@ -225,8 +198,10 @@
   }
 
   /* Carousel */
-  .carousel {
+  
+  .carousel-banner div{
     width: 90vw !important;
+    margin: 0 auto;
   }
   .carousel-caption{
     height: 100% !important;
