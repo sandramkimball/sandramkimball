@@ -51,6 +51,7 @@
 
 /* --- MEDIA RESPONSIVEBESS --- */
 @media only screen and (max-width: 1305px){
+ 
   /* Project Page */  
   .pj-container, .pj-big{
     width: 70vw !important;
@@ -58,6 +59,10 @@
 }
 
 @media only screen and (max-width: 1185px){
+   .tech-stack div{
+    width: 35vw !important;
+  }
+  
  /* Project Page */  
  .pj-container, .pj-big{
     width: 78vw !important;
@@ -78,14 +83,22 @@
 }
 
 @media only screen and (max-width: 1024px){
-  /* banner 1 */
+  /* Banner 1 About */
   .pic-title{width: 40% !important;}
   .skills-container{width: 40% !important}
-  .skills-container h6{font-size: 1.75rem !important}
-  .skills-container p{font-size:1.25rem !important}
+  .skills-container h6{font-size: 1.3rem !important}
+  .skills-container p{font-size:1.2rem !important}
   .skills-container svg{font-size:1.25rem !important}
 
-   /*  Carousel */
+  /* Banner 2 - Tech Skills  */
+  .tech-stack div{
+    width: 40vw !important;
+  }
+  .tech-stack li p{
+    font-size: 1rem !important; 
+  }
+
+   /*  Carousel Banner */
    .carousel-banner {
     margin: 10vh auto !important;
   }
@@ -108,32 +121,25 @@
     margin: 2px;
   }
 
-  /*home title */
+  /* Banner 0 - Title */
   .home-banner h1{width: 80%}
   .home-banner h3{font-size: 2rem}
   
 
-  /* banner 2 & skills */
+  /* Banner 2 - About */
   .banner-2 {
     min-height: 100vh !important;
     height: 100% !important;
   }
   .skills-container h6{font-size: 1.25rem !important}
   .skills-container p{font-size:1rem !important}
+  
+  /* Banner 2 - Tech Skills */
   .tech-stack div{
-    width: 30% !important;
-  }
-  .tech-stack ul{
-    width: 90% !important;
-  }
-  .tech-stack ul li p{
-    font-size: 1.05rem !important
-  }
-  .tech-stack ul svg{
-    font-size: 2rem !important
+    width: 45vw !important;
   }
 
-  /* banner 3 - projects */
+  /* Banner 3 - Projects????????? */
   .banner-3{
     background: #fff !important
   }
@@ -166,8 +172,8 @@
     font-size: 1rem !important;
   }
  
-   /* Project Page */  
-   .pj-container, .pj-big{
+  /* Project Page */  
+  .pj-container, .pj-big{
     width: 90vw !important;
   }
   .pj-big h2{
@@ -179,11 +185,6 @@
   .proj-card{
     width: 40vw !important;
   }
-  /* .proj-card h2{
-    white-space: wrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  } */
   .pj-container .top img{
     width: 40vw !important;
   }
@@ -202,17 +203,6 @@
     width: 48% !important;
   }
 
-  /* banner 2 & skills */
-  .tech-stack{
-    flex-direction: column !important;
-  }
-  .tech-stack div {
-    margin: 0 auto;
-    width: 80vw !important
-  }
-  .tech-stack ul svg{
-    font-size: 2.25rem !important
-  }
 
   /* Carousel */
   
@@ -231,7 +221,15 @@
 }
 
 @media only screen and (max-width: 700px){  
-   /* Project Page */  
+  /* Banner 2 - Tech Skills */
+  
+  .tech-stack{
+    flex-direction: column !important;
+  }
+  .tech-stack div{
+    width: 95vw !important;
+  }
+  /* Project Page */  
   .pj-big p{
     font-size: 14px !important;
   }

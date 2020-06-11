@@ -5,28 +5,26 @@ import { fab, faNode, faAngular, faCss3Alt, faEnvira, faSass, faHtml5, faReact, 
 import { faDatabase, faFileCode, faServer } from '@fortawesome/free-solid-svg-icons';
 
 
-const funds = [
-    {f_icon: faHtml5, name:'HTML5'},
-    {f_icon: faCss3Alt, name:'CSS3'},
-    {f_icon: faJs, name:'JAVASCRIPT'},
-    {f_icon: faPython, name:'PYTHON'},
-    {f_icon: faFileCode, name:'JEST'},
-]
 const FE = [
+    {f_icon: faHtml5, name:'HTML5'},
+    {f_icon: faCss3Alt, name:'CSS3 / SCSS / LESS'},
+    {f_icon: faJs, name:'JAVASCRIPT'},
+    {f_icon: faJs, name:'TYPESCRIPT'},
     {f_icon: faReact, name:'REACT JS'},
     {f_icon: faReact, name:'REDUX'},
-    {f_icon: faSass, name:'SASS'},
-    {f_icon: faFileCode, name:'BOOTSTRAP'},
+    {f_icon: faAngular, name:'ANGULAR JS'},
+    {f_icon: faFileCode, name:'BOOTSTRAP / MATERIAL UI'},
     {f_icon: faReact, name:'REACT-TESTING'},
-    {f_icon: faAngular, name:'ANGULAR'},
 ]
 const BE = [
     {f_icon: faNode, name:'NODE JS'},
     {f_icon: faNode, name:'EXPRESS JS'},
-    {f_icon: faDatabase, name:'SQL3 & KNEX'},
+    {f_icon: faPython, name:'PYTHON'},
+    {f_icon: faDatabase, name:'SQL & NOSQL'},
     {f_icon: faFileCode, name:'DJANGO'},
     {f_icon: faServer, name:'GRAPHQL'},
     {f_icon: faEnvira, name:'MONGODB'},
+    {f_icon: faFileCode, name:'JEST / MOCHA'},
 ]
 
 
@@ -35,22 +33,11 @@ const Skills  = () => {
     return(
         <SkillList className='tech-stack' data-testid='tech-stack'>
             <div>
-                <h6>FUNDAMENTALS</h6>
-                <ul>
-                {funds.map( item => (
-                    <li>
-                        <FontAwesomeIcon icon={item.f_icon}/>
-                        <p>{item.name}</p>
-                    </li>
-                ))}
-                </ul>
-            </div>
-            <div>
                 <h6>FRONT-END</h6>
                 <ul>
                 {FE.map( item => (
                     <li>
-                        <FontAwesomeIcon icon={item.f_icon}/>
+                        {/* <FontAwesomeIcon icon={item.f_icon}/> */}
                         <p>{item.name}</p>
                     </li>
                 ))}
@@ -61,7 +48,7 @@ const Skills  = () => {
                 <ul>
                 {BE.map( item => (
                     <li>
-                        <FontAwesomeIcon icon={item.f_icon}/>
+                        {/* <FontAwesomeIcon icon={item.f_icon}/> */}
                         <p>{item.name}</p>
                     </li>
                 ))}
@@ -72,42 +59,33 @@ const Skills  = () => {
 
 export default Skills;
 
-const SkillList = styled.div`
+const SkillList = styled.section`
     margin: 5px auto;
-    width: 90%;
     display: flex;    
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    div{
+        margin: 0 2vw;
+        width: 30vw
+    }
     h6{
         font-size: 1rem; 
-        margin: 3vh 0 1vh 0 
+        width: 90%;
+        margin: 5px auto;
+        padding: 15px 0;
+        background-color: #101010eb;
+        border-radius: 4px;
     }
     ul{
-        margin: auto;
-        padding:0;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 30vw;
+        width: 90%;
         li{  
-            width: 95%;
             list-style: none;
-            background-color: #101010eb;
-            display: flex;
-            align-items: center;
-            border-radius: 4px;
-            margin: 4px auto;
-            padding: 10px 0 10px 20px;
+            border-bottom: 3px solid #101010eb;
+            text-align: left;
+            padding: 5px 0;
             p{
-                padding: 0 0 0 10px; 
                 margin: 0;
                 font-size: 1.25rem
-            }
-            svg{
-                font-size: 3rem; 
-                padding-bottom: 5px
             }
         }    
     }

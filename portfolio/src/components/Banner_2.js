@@ -22,20 +22,6 @@ const AboutContainer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    a{text-decoration: none; color: #000}
-    button{
-        margin: 11px;
-        background: #eeeeef;
-        padding: 15px 10px;
-        border: none;
-        font-size: 1rem;
-        cursor: pointer;
-    }
-    button:hover{
-        background-color: red;
-        a{color: #eeeeeef}
-    }
-   
 
 `;
 
