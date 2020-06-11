@@ -10,11 +10,11 @@ const Card = (props) => {
                 <a href={props.obj.href} target="_blank">  
                     <img src={props.obj.img}/> 
                     <h2>{props.obj.title}</h2>
-                    <p className='stack'>{props.obj.stack}</p>
-                    <p>{props.obj.text}</p>
+                    {/* <p className='stack'>{props.obj.stack}</p>
+                    <p>{props.obj.text}</p> */}
                 </a>
             </div>
-            <div className='git-link'>                
+            {/* <div className='git-link'>                
                 {props.obj.f_url !== null && (
                     <a href={props.obj.f_url} target="_blank">
                         <FontAwesomeIcon icon={faGithub} />
@@ -26,7 +26,7 @@ const Card = (props) => {
                     <FontAwesomeIcon icon={faGithub} />
                     <h5>BE</h5>
                 </a>)}
-            </div>
+            </div> */}
         </Proj>
     )
 }
@@ -34,15 +34,16 @@ const Card = (props) => {
 export default Card
 
 const Proj = Styled.div`
-    margin: 15vh 2vw 0 2vw;
+    margin: 2vw;
     transition: opacity 300ms linear;
     position: relative;
     background: #f5f5f5;
     box-shadow: 0px 3px 5px gray;
-    height: 60vh;
+    height: 100%;
     cursor: pointer;
+    h2{ font-size: 1.25rem };
     :hover{
-        transform: scale(1.025);
+        transform: scale(1.005);
         h2, p, svg, h5{color: gray}
     }
     .top{
@@ -51,8 +52,8 @@ const Proj = Styled.div`
             font-style: italic;
         }
         img{
-            height: 30vh;
-            width: 45vh;
+            height: 25vh;
+            width: 40vh;
             object-fit: cover;
         }
         p{

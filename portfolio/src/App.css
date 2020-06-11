@@ -53,19 +53,16 @@
   margin: auto;
   text-decoration: none;
   padding: 5px 20px;
-  height: 140px;
+  height: 40px;
   color: gray;
   background: rgb(235, 233, 233)
 }
 .carousel-caption a{
-  color: #ce0505;
+  color: #000;
 }
 
 .carousel-caption h2 {
   font-size: 1.2rem
-}
-.carousel-caption p{
-  margin: 0;
 }
 
 .carousel svg{
@@ -87,10 +84,7 @@
 @media only screen and (max-width: 1145px){
    /*  Carousel */
    .carousel {
-    width: 65vw !important;
-  }
-  .carousel-caption{
-    height: 150px;
+    width: 60vw !important;
   }
 }
 @media only screen and (max-width: 1024px){
@@ -117,13 +111,6 @@
   .pj-container h2{font-size: 1.25rem;}
   .pj-container p{font-size: 1.25rem; max-width: 95% !important;}
 
-  /*  Carousel */
-  .carousel {
-    width: 60vw !important;
-  }
-  .carousel-caption{
-    height: 150px;
-  }
 
 }
 
@@ -203,19 +190,13 @@
 
   /* Carousel */
   .carousel {
-    width: 75vw !important;
+    width: 70vw !important;
   }
-  .carousel-caption{
-    height: 125px;
-  }
+  
   .carousel-caption h2{
     font-size: 1rem !important;
   }
-  
-  .carousel-caption p {
-    font-size: .8rem !important;
-    margin: 0;
-  }
+ 
 
 }
 
@@ -254,10 +235,7 @@
     font-size: 1.5rem !important;
     margin: 15px 0 30px 0 ;
   }
-  
-  .carousel-caption p {
-    display: none !important;
-  }
+ 
 }
 
 /* CELL PHONES */

@@ -1,14 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router} from "react-router-dom";
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import './App.css';
-// import {useSpring, animated} from 'react-spring';
-
 
 //components
-import Banner_0 from './components/Banner_0';
-import Banner_1 from './components/Banner_1';
-import Banner_2 from './components/Banner_2';
-import ProjectCarousel from './components/Carousel';
+import Home from './components/Home';
+import ProjectPage from './components/ProjectPage';
 import my_resume from './images/Resume.pdf'
 
 function App() {
@@ -19,17 +15,16 @@ function App() {
       <Router>
         <nav id="navbar">
           <ul>
-            <a href="#1"><li>ABOUT</li></a>
-            <a href="#2"><li>SKILLS</li></a>
+            <Link to='/' >ABOUT</Link>
+            <Link to='/projects' >PROJECTS</Link>
             <a href={my_resume} target='_blank' data-testid='resume-btn'><li>RESUME</li></a>
-            <a href="#3"><li>PROJECTS</li></a>
           </ul>
         </nav>
         <div id = 'body'>
-          <Banner_0/>
-          <Banner_1 className='banner-wrapper'/>
-          <Banner_2 />
-          <ProjectCarousel/>
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route path='/projects' component={ProjectPage}/> 
+          </Switch>
         </div>
       </Router>         
       </header>
