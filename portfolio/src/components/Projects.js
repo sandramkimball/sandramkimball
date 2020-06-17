@@ -78,10 +78,10 @@ const projects = [
     {
         id: 7,
         index: 6,
-        href: null,
+        href: 'https://marsexplorer.now.sh/login',
         img: mars,
-        title: 'COMING SOON',
-        text: 'Online Python/Django adventure game. Personal side project.',
+        title: 'MARS EXPLORER',
+        text: 'A current work in progress and an online adventure game.',
         stack: 'Python3 | Django | Html | Css',
         f_url: 'https://github.com/sandramkimball/marsexplorer',
         b_url: 'https://github.com/CS26-BW1-T28/CS-Build-Week-1'
