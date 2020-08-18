@@ -103,6 +103,18 @@ const ProjectCarousel = () => {
                             </a>
                         </Carousel.Caption>
                     </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={projects[7].img}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <a href={projects[7].href} target="_blank">
+                            <h2>{projects[7].title}</h2>
+                            </a>
+                        </Carousel.Caption>
+                    </Carousel.Item>
                 </Carousel>
             </div>
       </CarouselContainer>

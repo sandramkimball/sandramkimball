@@ -5,8 +5,9 @@ import icnst from '../images/icnst.jpg';
 import sautidb3 from '../images/sautidb3.png';
 import stylist from '../images/stylist-find.png';
 import mars from '../images/mars-explor.png';
-import toDo from '../images/reducer-todo1.jpg'
-import calculator from '../images/budget-calc.png'
+import toDo from '../images/reducer-todo1.jpg';
+import calculator from '../images/budget-calc.png';
+import cheese from '../images/is-cheese.png';
 
 const projects = [
     {
@@ -45,6 +46,17 @@ const projects = [
     {
         id: 4,
         index: 3,
+        href: 'https://thisischeese-6500e.web.app/',
+        img: cheese,
+        title: 'THIS IS CHEESE',
+        text: 'E-commerce template hosted on Firebase.',
+        stack: 'Angular | Scss',
+        f_url: 'https://github.com/sandramkimball/AngularPractice',
+        b_url: null,
+    },
+    {
+        id: 5,
+        index: 4,
         href: 'https://stylistfind.now.sh/',
         img: stylist,
         title: 'STYLIST FIND',
@@ -52,17 +64,6 @@ const projects = [
         stack: 'ReactJs | NodeJs | JsonWebToken | Html | Css',
         f_url: 'https://github.com/sandramkimball/stylistfind',
         b_url: 'https://github.com/sandramkimball/StylistFind---BE',
-    },
-    {
-        id: 5,
-        index: 4,
-        href: 'https://reducer-todo.sandramkimball.now.sh/',
-        img: toDo,
-        title: 'TO DO LIST',
-        text: 'A simple to do list where you can add and delete items using Redux. 1 day sprint, solo.',
-        stack: 'Redux | Html | Css',
-        f_url: 'https://github.com/sandramkimball/reducer-todo',
-        b_url: null,
     },
     {
         id: 6,
@@ -85,6 +86,17 @@ const projects = [
         stack: 'Python3 | Django | Html | Css',
         f_url: 'https://github.com/sandramkimball/marsexplorer',
         b_url: 'https://github.com/CS26-BW1-T28/CS-Build-Week-1'
+    },
+    {
+        id: 8,
+        index: 7,
+        href: 'https://reducer-todo.sandramkimball.now.sh/',
+        img: toDo,
+        title: 'TO DO LIST',
+        text: 'A simple to do list where you can add and delete items using Redux. 1 day sprint, solo.',
+        stack: 'Redux | Html | Css',
+        f_url: 'https://github.com/sandramkimball/reducer-todo',
+        b_url: null,
     },
 ]
 
