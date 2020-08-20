@@ -86,8 +86,6 @@
   /* Banner 1 About */
   .pic-title{width: 40% !important;}
   .skills-container{width: 40% !important}
-  .skills-container h6{font-size: 1.3rem !important}
-  .skills-container p{font-size:1.2rem !important}
   .skills-container svg{font-size:1.25rem !important}
 
   /* Banner 2 - Tech Skills  */
@@ -139,9 +137,7 @@
     min-height: 100vh !important;
     height: 100% !important;
   }
-  .skills-container h6{font-size: 1.25rem !important}
-  .skills-container p{font-size:1rem !important}
-  
+    
   /* Banner 2 - Tech Skills */
   .tech-stack div{
     width: 45vw !important;
@@ -263,18 +259,46 @@
 @media only screen and (max-width: 565px){
   /*  Banner 3 - Video Intro */
   .video-container{
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .video-container .question-container {
     width: 90% !important;
+    justify-content: center;
+    text-align: left !important;
   }
   .video-container .tab-bar{
     flex-direction: row;
+    justify-content: flex-start;
+    text-align: left !important;
   }
 }
 
 /* CELL PHONES */
 @media only screen and (max-width: 430px){
+
+  
+  /* home title */
+  .home-banner h1{font-size: 3.5rem !important}
+  .home-banner h3{font-size: 1.5rem !important}
+  
+  
+  /* Banner 1 - About */
+  .banner-1{
+    flex-direction: column;
+  }
+  .banner-1 div{
+    width: 95% !important;
+  }
+  .pic-title{
+    width: 90% !important; 
+    margin: auto;
+  }
+  .pic-title img{
+    height: 30vh !important;
+    width: 50vw !important;
+    border-radius: 50%;
+  }
+  
 
   /* Projects Page */
   .pj-big{
@@ -330,30 +354,6 @@
     display: initial !important;
     font-size: 2rem;
   }
-}
-
-@media only screen and (max-width: 420px){
-  /* home title */
-  .home-banner h1{font-size: 3.5rem !important}
-  .home-banner h3{font-size: 1.5rem !important}
-  
-  
-  /* banner 1 - about */
-  .banner-1{
-    flex-direction: column;
-  }
-  .banner-1 div{
-    width: 95% !important;
-  }
-  .pic-title{
-    width: 90% !important; 
-    margin: auto;
-  }
-  .pic-title img{
-    height: 30vh !important;
-    width: 50vw !important;
-  }
-  
 
 }
 

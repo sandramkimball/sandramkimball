@@ -59,7 +59,6 @@ const Banner = styled.section`
         width: 20%;
         img{
             width: 100%;
-            height: 60vh;
             object-fit: cover;
             object-position: top;
         }    

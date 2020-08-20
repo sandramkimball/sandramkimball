@@ -12,10 +12,7 @@ const Banner_3 = () =>{
     return(
         <Banner className='video-container'>
             <h6 className='meet-sandy'>WHO IS SANDY?</h6>
-            <Video autoplay='false' controls>
-                <source src={interview_1} type="video/mp4"/>
-                Sorry, your browser doesn't support mp4 videos.
-            </Video>
+            
             <div className='question-container'>
                 <div className='tab-bar'>
                     <h6 onClick={(e)=> onTabClick(e, 'values')} style={{"color": tab==='values' ? 'red':'gray'}}>VALUES</h6>
@@ -32,6 +29,11 @@ const Banner_3 = () =>{
                     <p>"Strengths and weaknesses are a Ying and Yang. I am highly self-critical and committed to a fault. I will burnout, worry about the details, and under sell myself, but will always over deliver."</p>
                 }
             </div>
+
+            <Video autoplay='false' controls>
+                <source src={interview_1} type="video/mp4"/>
+                Sorry, your browser doesn't support mp4 videos.
+            </Video>
         </Banner>
     )
 }
@@ -51,12 +53,12 @@ const Banner = styled.section`
     }
     .question-container{
         width: 35%;
-        padding: 1em 0 1em 1em;
-        text-align: left;
+        padding: 1em 1em 1em 0;
+        text-align: right;
         h6{
             cursor: pointer;
             color: gray;
-            padding: 0 10px 0 0;
+            padding: 0 0 0 10px ;
             max-width: 100%;
             :hover{
                 color: red;
@@ -64,7 +66,8 @@ const Banner = styled.section`
         }
         .tab-bar{
             display: flex;
-            flex-direction: flex-start;
+            text-align: right;
+            justify-content: flex-end;
             width: 100%;
             padding: 0 0
         }
