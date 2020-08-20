@@ -5,6 +5,7 @@ import '../App.css';
 import Banner_0 from './Banner_0';
 import Banner_1 from './Banner_1';
 import Banner_2 from './Banner_2';
+import Banner_3 from './Banner_3';
 import ProjectCarousel from './Carousel';
 
 function Home() {
@@ -15,7 +16,8 @@ function Home() {
         <div id = 'body'>
           <Banner_0/>
           <Banner_1 className='banner-wrapper'/>
-          <Banner_2 />
+          <Banner_2/>
+          <Banner_3/>
           <ProjectCarousel/>
         </div>
       </header>

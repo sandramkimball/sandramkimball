@@ -13,10 +13,6 @@ const ProjectCarousel = () => {
 
     return (
         <CarouselContainer className='carousel-banner'>
-            <div className='desc'>
-                <p>Projects are designed with users in mind, utilizing the latest technology to achieve responsiveness, accessibility and security.</p>
-                <Link to='/projects'><h4>View Project Gallery</h4></Link>
-            </div>
             <div> 
                 <Carousel indicators={false} nextIcon ={rightIcon} prevIcon={leftIcon}>
                     <Carousel.Item>
@@ -116,6 +112,10 @@ const ProjectCarousel = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
+            </div>
+            <div className='desc'>
+                <p>Projects are designed with users in mind, utilizing the latest technology to achieve responsiveness, accessibility and security.</p>
+                <Link to='/projects'><h4>View Project Gallery</h4></Link>
             </div>
       </CarouselContainer>
     )

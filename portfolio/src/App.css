@@ -98,6 +98,14 @@
     font-size: 1rem !important; 
   }
 
+  /* Banner 3 - Video Introduction */
+  .video-container .question-container{
+    width: 50%
+  }
+  .video-container video{
+    height: 60vh;
+  }
+
    /*  Carousel Banner */
    .carousel-banner {
     margin: 10vh auto !important;
@@ -155,6 +163,11 @@
   .banner-3 h2{
     font-size: 1.25rem;
     margin-bottom: 0
+  }
+
+  /*  Banner 3 - Video Intro */
+  .video-container .tab-bar{
+    flex-direction: column;
   }
  
 
@@ -221,8 +234,7 @@
 }
 
 @media only screen and (max-width: 700px){  
-  /* Banner 2 - Tech Skills */
-  
+  /* Banner 2 - Tech Skills */  
   .tech-stack{
     flex-direction: column !important;
   }
@@ -244,6 +256,20 @@
     width: 20vw !important;
     height: 15vw !important;
     object-fit: cover !important;
+  }
+
+}
+
+@media only screen and (max-width: 565px){
+  /*  Banner 3 - Video Intro */
+  .video-container{
+    flex-direction: column;
+  }
+  .video-container .question-container {
+    width: 90% !important;
+  }
+  .video-container .tab-bar{
+    flex-direction: row;
   }
 }
 
@@ -291,6 +317,18 @@
     display: initial;
     font-size: 1rem !important;
     padding-left: 10px !important;
+  }
+
+  /* Banner 3 - Video Intro */
+  .video-container video{
+    height: 80vh;
+  }
+  .video-container .question-container{
+    display: none;
+  }
+  .video-container .meet-sandy{
+    display: initial !important;
+    font-size: 2rem;
   }
 }
 
